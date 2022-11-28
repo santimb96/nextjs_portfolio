@@ -7,18 +7,17 @@ import {
   getDocs
 } from "firebase/firestore";
 
-const personalDataCollection = collection(db, "personalData");
+const skillCollection = collection(db, "skill");
 
 const handler = (req, res) => {
   const method = req.method;
 
   switch (method) {
     case "GET":
-      getPersonalData()
+      getSkill()
         .then(data => {
-          // const personalData = data.map(doc => doc.data()); if collection has more than one document
-          const personalData = data[0]?.data();
-          res.status(200).json(personalData);
+          const skill = data[0]?.data();
+          res.status(200).json(skill);
         })
         .catch(error => res.status(404).json(error));
         break;
@@ -29,7 +28,7 @@ const handler = (req, res) => {
   }
 };
 
-const getPersonalData = () => new Promise((resolve, reject) => {
+const getSkill = () => new Promise((resolve, reject) => {
   getDocs(personalDataCollection)
     .then(data => resolve(data?.docs))
     .catch(error => reject(error));
