@@ -7,12 +7,10 @@ import {
   getDocs
 } from "firebase/firestore";
 
-const skillCollection = collection(db, "skill");
+const skillCollection = collection(db, "skills");
 
 const handler = (req, res) => {
-  const method = req.method;
-
-  switch (method) {
+  switch (req?.method) {
     case "GET":
       getSkill()
         .then(data => {
@@ -29,8 +27,10 @@ const handler = (req, res) => {
 };
 
 const getSkill = () => new Promise((resolve, reject) => {
-  getDocs(personalDataCollection)
-    .then(data => resolve(data?.docs))
+  getDocs(skillCollection)
+    .then(data => {
+      resolve(data?.docs)
+    })
     .catch(error => reject(error));
 });
 

@@ -10,9 +10,7 @@ import {
 const personalDataCollection = collection(db, "personalData");
 
 const handler = (req, res) => {
-  const method = req.method;
-
-  switch (method) {
+  switch (req?.method) {
     case "GET":
       getPersonalData()
         .then(data => {
