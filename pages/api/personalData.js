@@ -1,5 +1,5 @@
 import {
-  db
+  initApp as db
 } from "../../src/utils/firebaseConfig";
 
 import {
@@ -7,7 +7,7 @@ import {
   getDocs
 } from "firebase/firestore";
 
-const personalDataCollection = collection(db, "personalData");
+const personalDataCollection = collection(db(), "personalData");
 
 const handler = (req, res) => {
   switch (req?.method) {
