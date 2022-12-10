@@ -1,6 +1,6 @@
 const success = (res, inputData) => {
-  console.log(inputData)
-  const data = inputData?.map(doc => doc?.data())
+  console.log(inputData.length)
+  const data = inputData?.length > 1 ? inputData?.map(doc => doc?.data()) : inputData[0]?.data();
   res.status(200).json(data);
 }
 
