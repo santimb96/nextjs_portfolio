@@ -1,34 +1,7 @@
-import {
-  initApp as db
-} from "../../src/settings/firebaseConfig";
+import getData from "../../src/utils/apiWrapper";
 
-import {
-  collection,
-  getDocs
-} from "firebase/firestore";
+const COLLECTION_NAME = "personalData";
 
-import { success, error } from "../../src/utils/resType";
+const getPersonalData = (req, res) => getData(req, res, COLLECTION_NAME);
 
-const personalDataCollection = collection(db(), "personalData");
-
-const handler = (req, res) => {
-  switch (req?.method) {
-    case "GET":
-      getPersonalData()
-        .then(data => success(res, data))
-        .catch(err => error(res, err));
-        break;
-    default:
-      res.status(404).json({
-        error: "method not supported"
-      });
-  }
-};
-
-const getPersonalData = () => new Promise((resolve, reject) => {
-  getDocs(personalDataCollection)
-    .then(data => resolve(data?.docs))
-    .catch(error => reject(error));
-});
-
-export default handler;
+export default getPersonalData;
