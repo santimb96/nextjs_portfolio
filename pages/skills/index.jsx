@@ -1,8 +1,9 @@
-import React from 'react'
+import React from 'react';
+import styles from './skills.module.css';
 
 const Skills = () => {
   return (
-    <div>Skills</div>
+    <div className={styles.prueba}>Skills</div>
   )
 }
 

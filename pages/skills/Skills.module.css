@@ -1,0 +1,6 @@
+/* @import '../../styles/colors.css'; */
+
+.prueba {
+  background: var(--primary-clear);
+  color: black;
+}
