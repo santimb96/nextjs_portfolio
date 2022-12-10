@@ -10,20 +10,12 @@ import {
 import getData from "../../src/utils/apiWrapper";
 import {
   success,
-  error
+  error,
+  methodNotAllowed
 } from "../../src/utils/resType";
 // const skillCollection = collection(db(), "skill");
 const COLLECTION_NAME = "skill";
 
-const getSkill = (req, res) => {
-  if (req?.method === "GET") {
-    return getData(COLLECTION_NAME)
-      .then(data => success(res, data))
-      .catch(err => error(res, err));
-  }
-  return res.status(405).json({
-    error: "Método no permitido"
-  });
-}
+const getSkill = (req, res) => getData(req, res, COLLECTION_NAME);
 
 export default getSkill;
