@@ -16,6 +16,7 @@ import {
   methodNotAllowed
 } from "../../src/utils/resType";
 
+// get req, res type and collection name for fetch data
 const getData = (req, res, COLLECTION_NAME) => {
   if (req?.method === "GET") {
     return fetchData(COLLECTION_NAME)
@@ -25,6 +26,7 @@ const getData = (req, res, COLLECTION_NAME) => {
   return methodNotAllowed(res);
 }
 
+// fetch data from firestore collection
 const fetchData = (COLLECTION_NAME) => new Promise((resolve, reject) => {
   const collectionRef = collection(db(), COLLECTION_NAME);
   getDocs(collectionRef)
