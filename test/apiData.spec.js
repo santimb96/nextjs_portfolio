@@ -1,5 +1,5 @@
+/* eslint-disable no-undef */
 import { expect } from "chai";
-import nextConfig from "../next.config";
 import getApiData from "../src/utils/apiData";
 
 describe("get api data ", () => {  
