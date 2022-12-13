@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "eslint --ext .js,.ts,.jsx,.tsx src",
+    "format": "eslint --fix & prettier --write src/**/*.{js,jsx,ts,tsx}",
     "test": "mocha -r dotenv/config --require @babel/register"
   },
   "dependencies": {
@@ -29,6 +30,7 @@
     "eslint": "^8.29.0",
     "eslint-plugin-react": "^7.31.11",
     "eslint-plugin-unused-imports": "^2.0.0",
-    "mocha": "^10.2.0"
+    "mocha": "^10.2.0",
+    "prettier": "2.8.1"
   }
 }
