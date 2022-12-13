@@ -1,21 +1,23 @@
 import { expect } from "chai";
+import nextConfig from "../next.config";
 import getApiData from "../src/utils/apiData";
 
-const URL_BASE = process.env.URL || "http://localhost:3000";
+describe("get api data ", () => {  
+  const BASE_URL = process.env.NEXT_PUBLIC_API_URL;
 
-describe("get api data ", () => {
-  it("should be successfully", async () => {
-    const data = await getApiData(`${URL_BASE}/api/skillAPI`);
+  it("get frontend data successfully", async () => {
+    console.log(BASE_URL)
+    const data = await getApiData(`${BASE_URL}/api/skillAPI`);
     expect(data?.frontend?.length).to.equal(4);
   });
 
-  it("should be successfully", async () => {
-    const data = await getApiData(`${URL_BASE}/api/skillAPI`);
+  it("get backend data successfully", async () => {
+    const data = await getApiData(`${BASE_URL}/api/skillAPI`);
     expect(data?.backend?.length).to.equal(3);
   });
 
-  it("should be failed", async () => {
-    const error = await getApiData(`${URL_BASE}/api/skillAPI2`);
+  it("get error message from backend", async () => {
+    const error = await getApiData(`${BASE_URL}/api/skillAPI2`);
     expect(error?.message).to.equal("Error al obtener los datos");
   });
 })
