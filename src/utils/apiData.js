@@ -1,3 +1,5 @@
+import { saveData, checkAndReturnData } from './localStorage'
+
 const getApiData = (endpoint) =>
   new Promise((resolve, reject) => {
     fetch(endpoint)
@@ -11,4 +13,17 @@ const getApiData = (endpoint) =>
       )
   })
 
-export default getApiData
+const getData = (COLLECTION_NAME, ENDPOINT) => {
+  const hasData = checkAndReturnData(COLLECTION_NAME)
+  if (!hasData) {
+    getApiData(ENDPOINT)
+      .then((data) => {
+        saveData(COLLECTION_NAME, data)
+        return data
+      })
+      .catch((error) => new Error(error))
+  }
+  return hasData
+}
+
+export default getData

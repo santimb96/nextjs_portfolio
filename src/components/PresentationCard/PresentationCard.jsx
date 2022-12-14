@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react'
-import getData from '../../src/utils/apiData'
-import styles from './Skills.module.css'
+import getData from '../../utils/apiData'
+import styles from './PresentationCard.module.css'
 
-const Skills = () => {
-  const COLLECTION_NAME = 'skills'
+const PresentationCard = () => {
+  const COLLECTION_NAME = 'personalData'
   const ENDPOINT = '/api/skillAPI'
 
-  const [skills, setSkills] = useState({})
+  const [personalData, setPersonalData] = useState({})
   const [error, setError] = useState(null)
   const [loading, setLoading] = useState(true)
 
@@ -16,12 +16,11 @@ const Skills = () => {
     if (data instanceof Error) {
       setError(data)
     } else {
-      setSkills(data)
+      setPersonalData(data)
     }
     setLoading(false)
   }, [])
-
-  return <div className={styles.prueba}>{loading ? 'Loading...' : error ? error?.message : skills?.frontend}</div>
+  return <div>{personalData.name}</div>
 }
 
-export default Skills
+export default PresentationCard
