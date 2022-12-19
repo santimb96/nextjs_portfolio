@@ -1,0 +1,12 @@
+.card {
+  background: transparent;
+  border: 1px solid var(--secondary-dark);
+  color: var(--secondary-dark);
+  display: grid;
+  place-items: center;
+}
+
+.title {
+  display: grid;
+  place-items: center;
+}

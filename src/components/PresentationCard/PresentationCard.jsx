@@ -2,25 +2,17 @@ import React, { useEffect, useState } from 'react'
 import getData from '../../utils/apiData'
 import styles from './PresentationCard.module.css'
 
-const PresentationCard = () => {
-  const COLLECTION_NAME = 'personalData'
-  const ENDPOINT = '/api/skillAPI'
-
-  const [personalData, setPersonalData] = useState({})
-  const [error, setError] = useState(null)
-  const [loading, setLoading] = useState(true)
-
-  const data = () => getData(COLLECTION_NAME, ENDPOINT)
-
-  useEffect(() => {
-    if (data instanceof Error) {
-      setError(data)
-    } else {
-      setPersonalData(data)
-    }
-    setLoading(false)
-  }, [])
-  return <div>{personalData.name}</div>
+const PresentationCard = ({ name, especialization, openToWork, personalSkills }) => {
+  return (
+    <>
+      <div className={styles.card}>
+        <div className={styles.title}>
+          <h1>{name}</h1>
+          <h2>{especialization}</h2>
+        </div>
+      </div>
+    </>
+  )
 }
 
 export default PresentationCard
