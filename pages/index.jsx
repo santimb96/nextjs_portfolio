@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import Footer from '../src/components/Footer/Footer'
 import PresentationCard from '../src/components/PresentationCard/PresentationCard'
 import getData from '../src/utils/apiData'
 import styles from './PublicWrapper.module.css'
@@ -33,12 +34,15 @@ const PublicWrapper = () => {
   }, [])
   return (
     <>
-      <PresentationCard
-        name={personalData?.name}
-        especialization={personalData?.especialization}
-        openToWork={personalData?.openToWork}
-        personalSkills={personalData?.personalSkills}
-      />
+      <div className={styles.presentationCardContainer}>
+        <PresentationCard
+          name={personalData?.name}
+          especialization={personalData?.especialization}
+          openToWork={personalData?.openToWork}
+          personalSkills={personalData?.personalSkills}
+        />
+      </div>
+      <Footer name={personalData?.name} socialMedia={personalData?.socialMedia} />
     </>
   )
 }

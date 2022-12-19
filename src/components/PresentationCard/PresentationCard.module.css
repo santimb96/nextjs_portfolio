@@ -1,4 +1,5 @@
 .card {
+  width: 100%;
   background: transparent;
   border: 1px solid var(--secondary-dark);
   color: var(--secondary-dark);
@@ -7,6 +8,7 @@
 }
 
 .title {
+  width: 100%;
   display: grid;
   place-items: center;
 }
