@@ -40,6 +40,7 @@ const PublicWrapper = () => {
           especialization={personalData?.especialization}
           openToWork={personalData?.openToWork}
           personalSkills={personalData?.personalSkills}
+          description={personalData?.description}
         />
       </div>
       <Footer name={personalData?.name} socialMedia={personalData?.socialMedia} />

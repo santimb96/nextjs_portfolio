@@ -1,5 +1,5 @@
 import React from 'react'
-import { BsGithub, BsLinkedin } from 'react-icons/bs'
+import { BsGithub, BsLinkedin, BsSuitHeartFill } from 'react-icons/bs'
 import { MdMail } from 'react-icons/md'
 import styles from './Footer.module.css'
 
@@ -12,9 +12,10 @@ const Footer = ({ name, socialMedia }) => {
 
   return (
     <div className={styles.footerCard}>
-      <div className={styles.title}>
-        <p>{name}</p>
-        <p>{2022}</p>
+      <div className={styles.text}>
+        <p className={styles.textContent}>
+          Con mucho <BsSuitHeartFill className={styles.iconGap} /> santimb96 - 2022
+        </p>
       </div>
       <div className={styles.socialMedia}>
         {socialMedia?.map((platform) => (

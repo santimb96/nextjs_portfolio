@@ -1,14 +1,96 @@
 .card {
+  height: 100%;
   width: 100%;
   background: transparent;
   border: 1px solid var(--secondary-dark);
   color: var(--secondary-dark);
   display: grid;
+  grid-template-rows: 70% 30%;
+  gap: 20px;
   place-items: center;
+  padding: 5%;
+}
+
+.titleBody,
+.descriptionBody {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  animation-name: toVisible;
+  animation-duration: 0.5s;
+}
+
+.displayNone {
+  display: none !important;
 }
 
 .title {
+  font-size: var(--title);
+}
+
+.subtitle {
+  font-size: var(--subtitle);
+}
+.displayButton {
+  height: 100%;
   width: 100%;
-  display: grid;
-  place-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.seeMoreOrLess {
+  width: 30%;
+  max-width: 400px;
+  font-size: var(--button);
+  margin-top: 2%;
+  background: var(--secondary-dark);
+  padding: 1.5% 2.5% 1.5% 2.5%;
+  color: var(--primary-dark);
+  font-family: inherit;
+  border: none;
+  border-radius: 5px;
+}
+
+.description {
+  text-align: justify;
+  font-size: var(--text);
+}
+
+.tags {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10%;
+  width: 100%;
+}
+
+.skillTag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  width: 25%;
+  background: var(--secondary-dark);
+  padding: 1% 2.5% 1% 2.5%;
+  color: var(--primary-dark);
+  font-family: inherit;
+  font-size: var(--tag);
+  border: none;
+  border-radius: 10px;
+}
+
+/* ANIMATIONS */
+
+@keyframes toVisible {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

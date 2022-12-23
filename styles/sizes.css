@@ -1,0 +1,9 @@
+:root {
+  --button: clamp(12px, 0.8333vw + 9px, 18px);
+  --tag: clamp(10px, 2.0833vw + 2.5px, 25px);
+  --text: clamp(16px, 2.6389vw + 6.5px, 35px);
+  --footer-text: clamp(12px, 1.1111vw + 8px, 20px);
+  --title: clamp(25px, 2.0833vw + 17.5px, 40px);
+  --subtitle: clamp(18px, 1.6667vw + 12px, 30px);
+  --icon: clamp(16px, 2.6389vw + 6.5px, 35px);
+}
