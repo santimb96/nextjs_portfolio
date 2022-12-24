@@ -1,10 +1,17 @@
 import { saveData, checkAndReturnData } from './localStorage'
 
-const getApiData = (endpoint) =>
+const getApiData = (COLLECTION_NAME, ENDPOINT) =>
   new Promise((resolve, reject) => {
-    fetch(endpoint)
+    const hasData = checkAndReturnData(COLLECTION_NAME)
+    if (hasData) {
+      resolve(hasData)
+    }
+    fetch(ENDPOINT)
       .then((response) => response.json())
-      .then((data) => resolve(data))
+      .then((data) => {
+        saveData(COLLECTION_NAME, data)
+        resolve(data)
+      })
       .catch((error) =>
         reject({
           message: 'Error al obtener los datos',
@@ -13,17 +20,4 @@ const getApiData = (endpoint) =>
       )
   })
 
-const getData = (COLLECTION_NAME, ENDPOINT) => {
-  const hasData = checkAndReturnData(COLLECTION_NAME)
-  if (!hasData) {
-    getApiData(ENDPOINT)
-      .then((data) => {
-        saveData(COLLECTION_NAME, data)
-        return data
-      })
-      .catch((error) => new Error(error))
-  }
-  return hasData
-}
-
-export default getData
+export default getApiData

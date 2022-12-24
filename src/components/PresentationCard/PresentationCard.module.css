@@ -54,6 +54,8 @@
   font-family: inherit;
   border: none;
   border-radius: 5px;
+  animation-name: toVisible;
+  animation-duration: 0.5s;
 }
 
 .description {
