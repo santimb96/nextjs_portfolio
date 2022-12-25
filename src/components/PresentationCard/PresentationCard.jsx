@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { AiFillTags } from 'react-icons/ai'
 import getApiData from '../../utils/apiData'
+import WaterSpinner from '../WaterSpinner/WaterSpinner'
 import styles from './PresentationCard.module.css'
 
 const PresentationCard = ({ setFooterData }) => {
@@ -23,7 +24,7 @@ const PresentationCard = ({ setFooterData }) => {
   return (
     <>
       {loading ? (
-        <div>Loading...</div>
+        <WaterSpinner />
       ) : (
         <div className={styles.card}>
           <div className={showDescription ? styles.displayNone : styles.titleBody}>
