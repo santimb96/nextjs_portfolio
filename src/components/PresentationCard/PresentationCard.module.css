@@ -2,7 +2,6 @@
   height: 100%;
   width: 100%;
   background: transparent;
-  border: 1px solid var(--secondary-dark);
   color: var(--secondary-dark);
   display: grid;
   grid-template-rows: 70% 30%;

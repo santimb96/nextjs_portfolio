@@ -6,6 +6,7 @@
   grid-template-rows: 50% 50%;
   bottom: 0;
   position: absolute;
+  animation: toVisible 0.5s;
 }
 
 .socialMedia {
@@ -32,4 +33,14 @@
 
 .socialLink {
   font-size: var(--icon);
+}
+/* ANIMATIONS */
+
+@keyframes toVisible {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

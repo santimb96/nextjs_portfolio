@@ -1,4 +1,5 @@
 :root {
+  --navbar-button-complete-screen: clamp(12px, 1.1111vw + 8px, 20px);
   --close-or-open: clamp(20px, 2.7778vw + 10px, 40px);
   --button: clamp(12px, 0.8333vw + 9px, 18px);
   --tag: clamp(10px, 2.0833vw + 2.5px, 25px);

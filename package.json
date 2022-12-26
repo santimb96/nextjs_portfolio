@@ -13,6 +13,9 @@
   "dependencies": {
     "@babel/plugin-syntax-jsx": "^7.18.6",
     "@babel/preset-react": "^7.18.6",
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@mui/material": "^5.11.2",
     "chai": "^4.3.7",
     "dotenv": "^16.0.3",
     "eslint-config-next": "13.0.5",
