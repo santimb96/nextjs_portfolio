@@ -1,0 +1,34 @@
+.skillCard {
+  position: relative;
+}
+.bgImage {
+  height: 40vh;
+  width: 100vw;
+}
+.body {
+  width: 100%;
+  color: var(--detail-dark);
+  font-weight: bold;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 5%;
+  filter: drop-shadow(0 0 0.025rem rgb(0, 0, 0));
+  height: 40vh;
+  background: rgba(70, 66, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title,
+.description {
+  text-align: justify;
+}
+.title {
+  font-size: var(--title);
+}
+.description {
+  font-size: var(--text);
+}

@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import Footer from '../src/components/Footer/Footer'
 import NavBar from '../src/components/NavBar/NavBar'
-import PresentationCard from '../src/components/PresentationCard/PresentationCard'
+import PresentationCard from '../src/components/CollectionComponents/PresentationCard/PresentationCard'
 import styles from './PublicWrapper.module.css'
+import SkillList from '../src/components/CollectionComponents/Skills/SkillList'
 
 const PublicWrapper = () => {
   const [page, setPage] = useState('personaldata')
@@ -13,8 +14,12 @@ const PublicWrapper = () => {
       <div className={styles.presentationCardContainer}>
         <PresentationCard setFooterData={setFooterData} />
       </div>
+    ),
+    skills: (
+      <div className={styles.skillsContainer}>
+        <SkillList />
+      </div>
     )
-    // skills: <Skills />,
     // experience: <Experience />,
     // certification: <Certification />
   }

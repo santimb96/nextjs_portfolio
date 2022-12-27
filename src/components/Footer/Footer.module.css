@@ -1,11 +1,10 @@
 .footerCard {
   color: var(--secondary-dark);
   width: 100%;
-  height: 20vh;
+  height: 20%;
   display: grid;
   grid-template-rows: 50% 50%;
-  bottom: 0;
-  position: absolute;
+  margin-top: auto;
   animation: toVisible 0.5s;
 }
 

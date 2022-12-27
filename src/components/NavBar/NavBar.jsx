@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import NavButton from '../NavButton/NavButton'
 import { RxHamburgerMenu } from 'react-icons/rx'
 import { IoCloseOutline } from 'react-icons/io5'
@@ -10,6 +10,8 @@ const NavBar = ({ page, setPage }) => {
   const [open, setOpen] = useState(false)
   const match = useMediaQuery('(min-width: 768px)')
   const handleOpen = () => setOpen(!open)
+
+  useEffect(() => setOpen(false), [page])
 
   return (
     <>

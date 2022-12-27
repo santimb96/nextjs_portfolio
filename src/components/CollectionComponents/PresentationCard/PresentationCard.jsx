@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { AiFillTags } from 'react-icons/ai'
-import getApiData from '../../utils/apiData'
-import WaterSpinner from '../WaterSpinner/WaterSpinner'
+import getApiData from '../../../utils/apiData'
+import WaterSpinner from '../../WaterSpinner/WaterSpinner'
 import styles from './PresentationCard.module.css'
 
 const PresentationCard = ({ setFooterData }) => {

@@ -5,10 +5,21 @@
 }
 
 .presentationCardContainer {
-  position: absolute;
+  /* margin-top: 15%; */
+  position: relative;
   top: 10%;
   width: 100%;
-  height: 70%;
+  min-height: 80%;
   display: grid;
   place-items: center;
+}
+
+.skillsContainer {
+  position: relative;
+  top: 10%;
+  width: 100%;
+  min-height: 100%;
+  display: grid;
+  place-items: center;
+  padding-bottom: 30%;
 }

@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './NavButton.module.css'
-import COLLECTIONS_DIC from '../../utils/translationDictionary'
+import { COLLECTIONS_DIC } from '../../utils/translationDictionary'
 
 const NavButton = ({ name, duration, setPage, isCurrentRoute }) => {
   return (

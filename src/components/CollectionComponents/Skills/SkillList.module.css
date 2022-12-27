@@ -1,0 +1,15 @@
+.skillContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5vh;
+  animation: toVisible 0.5s;
+}
+
+@keyframes toVisible {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
