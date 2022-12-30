@@ -1,0 +1,42 @@
+.certificationCard {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  color: var(--secondary-dark);
+  font-weight: bold;
+}
+.body {
+  font-size: var(--certification-card);
+  display: grid;
+  place-items: center;
+  text-align: center;
+  font-weight: bold;
+  padding: 0 2.5% 0 5%;
+}
+.degree,
+.institution,
+.grade,
+.endDate {
+  font-size: var(--certification-card);
+}
+.degree {
+  font-size: var(--certification-card-title);
+}
+.institution {
+  font-size: var(--certification-card-subtitle);
+}
+.extendedInformation {
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 0 5% 0 2.5%;
+  background: var(--secondary-dark);
+  color: var(--primary-dark);
+}
+.description {
+  font-size: var(--certification-card-text);
+}
+
+.icon {
+  padding: 5%;
+  font-size: var(--certification-card-icon);
+}

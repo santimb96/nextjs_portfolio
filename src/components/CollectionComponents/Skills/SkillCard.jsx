@@ -1,22 +1,24 @@
 import React from 'react'
 import { SKILLS_DIC } from '../../../utils/translationDictionary'
+import { GoFlame } from 'react-icons/go'
+import { CgCodeSlash } from 'react-icons/cg'
+import List from './List'
 import styles from './SkillCard.module.css'
 
-const SkillCard = ({ listName, list, description }) => {
-  const LIST_IMAGE = {
-    frontend: 'react',
-    backend: 'express',
-    database: 'mongodb',
-    versionControl: 'github'
-  }
-
+const SkillCard = ({ listName, collectionList }) => {
   return (
     <>
       <div className={styles.skillCard}>
-        <div className={styles.bgImage} style={{ background: `url("/img/${LIST_IMAGE[listName]}.png") no-repeat center` }}></div>
         <div className={styles.body}>
-          <h1 className={styles.title}>{SKILLS_DIC?.en[listName]}</h1>
-          <p className={styles.description}>{description}</p>
+          <h2 className={styles.title}>{SKILLS_DIC?.en[listName]}</h2>
+          <div className={styles.icons}>
+            <GoFlame />
+            <CgCodeSlash />
+          </div>
+          <div className={styles.lists}>
+            <List listType='preference' collection={collectionList} />
+            <List listType='other' collection={collectionList} />
+          </div>
         </div>
       </div>
     </>

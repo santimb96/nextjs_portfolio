@@ -12,9 +12,10 @@ const SKILLS_DIC = {
   en: {
     // English
     backend: 'Servidor',
-    frontend: 'Cliente',
+    frontend: 'UX/UI',
     database: 'Base de datos',
-    versionControl: 'Control de versiones'
+    versionControl: 'Control de versiones',
+    utility: 'Despliegue/VCS'
   }
 }
 

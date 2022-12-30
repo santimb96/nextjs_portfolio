@@ -23,3 +23,12 @@
   place-items: center;
   padding-bottom: 30%;
 }
+.certificationContainer {
+  position: relative;
+  top: 10%;
+  width: 100%;
+  min-height: 100%;
+  display: grid;
+  place-items: center;
+  padding-bottom: 30%;
+}

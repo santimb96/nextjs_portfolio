@@ -4,6 +4,7 @@ import NavBar from '../src/components/NavBar/NavBar'
 import PresentationCard from '../src/components/CollectionComponents/PresentationCard/PresentationCard'
 import styles from './PublicWrapper.module.css'
 import SkillList from '../src/components/CollectionComponents/Skills/SkillList'
+import CertificationList from '../src/components/CollectionComponents/Certifications/CertificationList'
 
 const PublicWrapper = () => {
   const [page, setPage] = useState('personaldata')
@@ -19,9 +20,13 @@ const PublicWrapper = () => {
       <div className={styles.skillsContainer}>
         <SkillList />
       </div>
+    ),
+    certification: (
+      <div className={styles.certificationContainer}>
+        <CertificationList />
+      </div>
     )
     // experience: <Experience />,
-    // certification: <Certification />
   }
 
   return (
