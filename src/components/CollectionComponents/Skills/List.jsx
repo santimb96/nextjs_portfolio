@@ -1,15 +1,14 @@
 import React from 'react'
-import { CgCodeSlash } from 'react-icons/cg'
-import { GoFlame } from 'react-icons/go'
-import ListElement from './ListElement'
 import styles from './List.module.css'
 
-const List = ({ listType, collection }) => {
-  const getListElements = (listType) => collection?.[listType]?.map((name, idx) => <ListElement name={name} idx={idx} />)
-
+const List = ({ collection }) => {
   return (
-    <div className={styles.listContent}>
-      <div className={styles.listBody}>{getListElements(listType)}</div>
+    <div className={styles.list}>
+      {collection?.map((name) => (
+        <p key={name} className={styles.item}>
+          {name}
+        </p>
+      ))}
     </div>
   )
 }

@@ -15,7 +15,7 @@ const SKILLS_DIC = {
     frontend: 'UX/UI',
     database: 'Base de datos',
     versionControl: 'Control de versiones',
-    utility: 'Despliegue/VCS'
+    utility: 'Despliegue y VCS'
   }
 }
 

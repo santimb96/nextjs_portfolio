@@ -7,21 +7,19 @@ import styles from './SkillCard.module.css'
 
 const SkillCard = ({ listName, collectionList }) => {
   return (
-    <>
-      <div className={styles.skillCard}>
-        <div className={styles.body}>
-          <h2 className={styles.title}>{SKILLS_DIC?.en[listName]}</h2>
-          <div className={styles.icons}>
-            <GoFlame />
-            <CgCodeSlash />
-          </div>
-          <div className={styles.lists}>
-            <List listType='preference' collection={collectionList} />
-            <List listType='other' collection={collectionList} />
-          </div>
-        </div>
+    <div className={styles.skillCard}>
+      <div className={styles.title}>
+        <h3>{SKILLS_DIC?.en[listName]}</h3>
       </div>
-    </>
+      <div className={styles.icons}>
+        <GoFlame />
+        <CgCodeSlash />
+      </div>
+      <div className={styles.lists}>
+        <List collection={collectionList?.preference} />
+        <List collection={collectionList?.other} />
+      </div>
+    </div>
   )
 }
 
