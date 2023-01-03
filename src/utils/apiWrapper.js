@@ -1,9 +1,6 @@
 import { collection } from 'firebase/firestore'
-
 import { initApp as db } from '../../src/settings/firebaseConfig'
-
 import { getDocs } from 'firebase/firestore'
-
 import { success, error, methodNotAllowed } from '../../src/utils/resType'
 
 // get req, res type and collection name for fetch data

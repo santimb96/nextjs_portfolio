@@ -1,0 +1,40 @@
+.spinnerContainer {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  place-items: center;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  display: grid;
+  grid-template-rows: 40% 10% 20% 30%;
+  place-items: center;
+  padding: 5%;
+  color: var(--secondary-dark);
+}
+
+.icon {
+  align-self: flex-end;
+  font-size: 10rem;
+}
+.errorCode {
+  align-self: flex-end;
+  text-align: center;
+  width: 100%;
+  margin: 0;
+}
+
+.description {
+  margin: 0;
+}
+.redirectButton {
+  align-self: flex-start;
+  background: var(--secondary-dark);
+  color: var(--primary-dark);
+  border: none;
+  border-radius: 5px;
+  padding: 2.5%;
+}
