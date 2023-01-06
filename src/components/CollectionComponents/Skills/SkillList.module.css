@@ -1,6 +1,7 @@
 .skillContainer {
   display: grid;
   grid-template-columns: 100%;
+  place-items: center;
   gap: 5vh;
   animation: toVisible 0.5s;
   width: 100%;
@@ -17,6 +18,9 @@
 
 @media (min-width: 768px) {
   .skillContainer {
-    width: 100%;
+    grid-template-columns: repeat(4, 25%);
+    gap: 0;
+    width: 80%;
+    height: 70%;
   }
 }

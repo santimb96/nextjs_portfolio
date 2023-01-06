@@ -24,7 +24,7 @@ const CertificationList = () => {
       ) : (
         <div className={styles.certificationList}>
           {certifications?.map((certification, idx) => (
-            <CertificationCard props={certification} />
+            <CertificationCard key={certification + idx} props={certification} />
           ))}
         </div>
       )}

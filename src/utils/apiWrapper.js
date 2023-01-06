@@ -1,7 +1,7 @@
 import { collection } from 'firebase/firestore'
 import { initApp as db } from '../../src/settings/firebaseConfig'
-import { getDocs } from 'firebase/firestore'
 import { success, error, methodNotAllowed } from '../../src/utils/resType'
+import { getDocsWithAuth } from './firebaseAuthOperations'
 
 // get req, res type and collection name for fetch data
 const getData = (req, res, COLLECTION_NAME) => {
@@ -14,12 +14,9 @@ const getData = (req, res, COLLECTION_NAME) => {
 }
 
 // fetch data from firestore collection
-const fetchData = (COLLECTION_NAME) =>
-  new Promise((resolve, reject) => {
-    const collectionRef = collection(db(), COLLECTION_NAME)
-    getDocs(collectionRef)
-      .then((data) => resolve(data?.docs))
-      .catch((error) => reject(error))
-  })
+const fetchData = (COLLECTION_NAME) => {
+  const collectionRef = collection(db(), COLLECTION_NAME)
+  return getDocsWithAuth(collectionRef)
+}
 
 export default getData

@@ -1,42 +1,80 @@
 .certificationCard {
+  width: 90%;
+  height: 50vh;
   display: grid;
   grid-template-columns: 50% 50%;
   color: var(--secondary-dark);
   font-weight: bold;
+  border: 1px solid var(--background-opacity);
+  border-radius: 5px;
 }
 .body {
   font-size: var(--certification-card);
   display: grid;
   place-items: center;
   text-align: center;
-  font-weight: bold;
-  padding: 0 2.5% 0 5%;
+  gap: 2.5%;
+  padding: 5%;
 }
-.degree,
-.institution,
-.grade,
-.endDate {
-  font-size: var(--certification-card);
+.fields {
+  display: grid;
+  place-items: center;
+  height: 100%;
+  width: 100%;
+}
+.fields > h3,
+.fields > p {
+  margin: 0;
+  inline-size: 100%;
+}
+
+.fields > h3 {
+  font-size: var(--subtitle);
+  border-bottom: 1px solid;
+}
+.fields > p {
+  font-size: var(--text);
+}
+
+.fields > a {
+  padding: 2.5%;
+  font-size: var(--text);
+  color: var(--primary-dark);
+  border-radius: 5px;
+  background: var(--secondary-dark);
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5%;
 }
 .degree {
-  font-size: var(--certification-card-title);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
-.institution {
-  font-size: var(--certification-card-subtitle);
+.degree > h2 {
+  margin: 0;
+  font-size: var(--title);
 }
 .extendedInformation {
   display: grid;
+  grid-template-rows: 20% 80%;
   place-items: center;
   text-align: center;
-  padding: 0 5% 0 2.5%;
-  background: var(--secondary-dark);
-  color: var(--primary-dark);
+  background: var(--background-opacity);
+  color: var(--secondary-dark);
+  padding: 5%;
 }
 .description {
-  font-size: var(--certification-card-text);
+  font-size: var(--text);
+  margin: 0;
 }
 
 .icon {
-  padding: 5%;
   font-size: var(--certification-card-icon);
+}
+
+@media (min-width: 768px) {
 }

@@ -5,7 +5,9 @@
   --primary-clear: #d4cdc1;
   --letter-clear: #e6e7de;
 
+  --background-opacity: rgba(255, 246, 246, 0.1);
   --primary-dark: #111112;
   --secondary-dark: #988345;
+  --hover-dark: #baa052;
   --detail-dark: #f2f1ed;
 }

@@ -8,6 +8,7 @@ import CertificationList from '../src/components/CollectionComponents/Certificat
 
 const PublicWrapper = () => {
   const [page, setPage] = useState('personaldata')
+  const [show, setShow] = useState(false)
   const [footerData, setFooterData] = useState({})
 
   const PAGE_COMPONENT = {
@@ -31,9 +32,13 @@ const PublicWrapper = () => {
 
   return (
     <div className={styles.container}>
-      <NavBar page={page} setPage={setPage} />
-      {PAGE_COMPONENT[page]}
-      <Footer name={footerData?.name} socialMedia={footerData?.socialMedia} />
+      <NavBar page={page} setPage={setPage} setShow={setShow} />
+      {show && (
+        <>
+          {PAGE_COMPONENT[page]}
+          <Footer name={footerData?.name} socialMedia={footerData?.socialMedia} />
+        </>
+      )}
     </div>
   )
 }

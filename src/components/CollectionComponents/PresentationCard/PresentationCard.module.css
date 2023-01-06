@@ -6,20 +6,24 @@
   display: grid;
   grid-template-rows: 70% 30%;
   gap: 20px;
-  place-items: center;
+  /* place-items: center; */
   padding: 5%;
 }
 
 .titleBody,
 .descriptionBody {
+  /* overflow-y: scroll; */
   height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   animation-name: toVisible;
   animation-duration: 0.5s;
+}
+.description > p:last-child {
+  text-align: center;
 }
 
 .displayNone {
@@ -34,19 +38,16 @@
   font-size: var(--subtitle);
 }
 .displayButton {
-  height: 100%;
+  align-self: flex-start;
   width: 100%;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
 }
 
 .seeMoreOrLess {
-  width: 30%;
-  max-width: 400px;
-  font-size: var(--button);
-  margin-top: 2%;
+  width: var(--button);
+  font-size: var(--text);
   background: var(--secondary-dark);
   padding: 1.5% 2.5% 1.5% 2.5%;
   color: var(--primary-dark);
@@ -76,9 +77,9 @@
   justify-content: center;
   gap: 5px;
   width: 25%;
-  background: var(--secondary-dark);
+  background: var(--background-opacity);
   padding: 1% 2.5% 1% 2.5%;
-  color: var(--primary-dark);
+  color: var(--secondary-dark);
   font-family: inherit;
   font-size: var(--tag);
   border: none;
@@ -93,5 +94,37 @@
   }
   to {
     opacity: 1;
+  }
+}
+
+@media (min-width: 768px) {
+  .card {
+    width: 80%;
+    padding: 0%;
+    gap: 5px;
+  }
+  .skillTag {
+    width: 20%;
+  }
+  .descriptionBody {
+    justify-content: center;
+  }
+  .description > p {
+    margin: 2.5%;
+  }
+  .seeMoreOrLess {
+    margin: 0;
+    transition: 0.3s all ease-in-out;
+    padding: 1%;
+  }
+  .seeMoreOrLess:hover {
+    background: var(--hover-dark);
+    /* color: var(--secondary-dark); */
+  }
+  .displayButton {
+    /* height: 40%; */
+  }
+  .tags {
+    display: none;
   }
 }

@@ -21,6 +21,11 @@ const PresentationCard = ({ setFooterData }) => {
       .finally(() => setLoading(false))
   }, [])
 
+  const splitByPoint = () => {
+    const fixText = personalData?.description.split('. ')
+    return fixText.map((sentence) => <p key={sentence}>{sentence}.</p>)
+  }
+
   return (
     <>
       {loading ? (
@@ -32,7 +37,7 @@ const PresentationCard = ({ setFooterData }) => {
             <h2 className={styles.subtitle}>{personalData?.especialization}</h2>
           </div>
           <div className={showDescription ? styles.descriptionBody : styles.displayNone}>
-            <p className={styles.description}>{personalData?.description}</p>
+            <div className={styles.description}>{splitByPoint()}</div>
             <div className={styles.tags}>
               {personalData?.personalSkills?.map((skill) => (
                 <div key={skill} className={styles.skillTag}>

@@ -1,7 +1,11 @@
 .container {
   height: 100vh;
-  width: 100vw;
+  /* width: 100vw; */
   position: relative;
+}
+
+.displayNone {
+  display: none !important;
 }
 
 .presentationCardContainer {
@@ -12,6 +16,7 @@
   min-height: 80%;
   display: grid;
   place-items: center;
+  /* padding-bottom: 20%; */
 }
 
 .skillsContainer {
@@ -31,4 +36,12 @@
   display: grid;
   place-items: center;
   padding-bottom: 30%;
+}
+
+@media (min-width: 768px) {
+  .skillsContainer {
+    justify-items: center;
+    align-items: flex-start;
+    padding-bottom: 0;
+  }
 }

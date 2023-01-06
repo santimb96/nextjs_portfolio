@@ -18,6 +18,9 @@
 
 .text {
   font-size: var(--footer-text);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
 }
 
 .textContent {
@@ -41,5 +44,14 @@
   }
   to {
     opacity: 1;
+  }
+}
+
+@media (min-width: 768px) {
+  .socialLink {
+    transition: 0.3s all ease-in-out;
+  }
+  .socialLink:hover {
+    color: var(--hover-dark);
   }
 }

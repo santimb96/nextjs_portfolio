@@ -11,7 +11,4 @@ const error = (res, error) => {
   })
 }
 
-// only allowed method is GET
-const methodNotAllowed = (res) => res.status(405).json({ message: 'Método no permitido' })
-
-export { success, error, methodNotAllowed }
+export { success, error }

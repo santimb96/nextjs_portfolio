@@ -5,6 +5,12 @@
   animation: toVisible 0.5s;
 }
 
+@media (min-width: 768px) {
+  .certificationList {
+    gap: 2.5vh;
+  }
+}
+
 /* ANIMATIONS */
 
 @keyframes toVisible {
