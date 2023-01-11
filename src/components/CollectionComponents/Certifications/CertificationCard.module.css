@@ -5,10 +5,17 @@
   grid-template-columns: 50% 50%;
   color: var(--secondary-dark);
   font-weight: bold;
-  border: 1px solid var(--background-opacity);
-  border-radius: 5px;
+  /* border: 1px solid var(--background-opacity); */
+  border-radius: 10px;
+}
+.separator {
+  display: block;
+  height: 1.5px;
+  width: 100%;
+  background: var(--secondary-dark);
 }
 .body {
+  background: var(--card-background-opacity);
   font-size: var(--certification-card);
   display: grid;
   place-items: center;
@@ -22,15 +29,15 @@
   height: 100%;
   width: 100%;
 }
-.fields > h3,
+.fields > h4,
 .fields > p {
   margin: 0;
   inline-size: 100%;
 }
 
-.fields > h3 {
+.fields > h4 {
   font-size: var(--subtitle);
-  border-bottom: 1px solid;
+  /* border-bottom: 1px solid; */
 }
 .fields > p {
   font-size: var(--text);
@@ -54,7 +61,7 @@
   align-items: center;
   flex-wrap: wrap;
 }
-.degree > h2 {
+.degree > h3 {
   margin: 0;
   font-size: var(--title);
 }
@@ -77,4 +84,57 @@
 }
 
 @media (min-width: 768px) {
+  .certificationCard {
+    height: 80vh;
+    width: 80%;
+    background: var(--card-background-opacity);
+    border: none;
+  }
+  .fields {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+  }
+  .degree {
+    width: 100%;
+  }
+  .fields > a {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: var(--text);
+    color: var(--primary-dark);
+    background: var(--secondary-dark);
+    background-size: cover;
+    backdrop-filter: grayscale(100%);
+    width: 100%;
+    max-width: 300px;
+    height: 45%;
+    transition: all 0.3s ease-in-out;
+  }
+  .fields > a:hover {
+    background: var(--hover-dark);
+  }
+  .fields > h4 {
+    text-align: start;
+    font-size: var(--text);
+    border-bottom: none;
+  }
+  .fields > p {
+    text-align: start;
+  }
+  .img {
+    object-fit: contain;
+    filter: brightness(0);
+  }
+  .extendedInformation {
+    grid-template-rows: 35% 65%;
+    background: none;
+  }
+  .extendedInformation > svg {
+    align-self: flex-end;
+  }
+  .description {
+    background: var(--background-opacity);
+    border-radius: 10px;
+    padding: 5%;
+  }
 }

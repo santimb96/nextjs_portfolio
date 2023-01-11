@@ -28,7 +28,13 @@ const SkillList = () => {
           {skillsList
             .sort((a, b) => (a > b ? 1 : -1))
             ?.map((listName, idx) => (
-              <SkillCard key={listName} listName={listName} collectionList={skills[listName]} idx={idx} />
+              <SkillCard
+                key={listName}
+                listName={listName}
+                collectionList={skills[listName]}
+                idx={idx}
+                description={skills[`${listName}Description`]}
+              />
             ))}
         </div>
       )}

@@ -1,0 +1,55 @@
+.topToBtm {
+  position: relative;
+}
+.iconPosition {
+  position: fixed;
+  bottom: 40px;
+  right: 25px;
+  z-index: 20;
+}
+.iconStyle {
+  width: 30px;
+  height: 30px;
+  background: var(--primary-dark);
+  border-radius: 50%;
+  color: var(--secondary-dark);
+  cursor: pointer;
+  animation: moveButton 1.5s ease-in-out infinite, toVisible 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+@media (min-width: 768px) {
+  .iconStyle {
+    animation: toVisible 0.5s ease-in-out;
+    background: transparent;
+    width: 60px;
+    height: 60px;
+    scale: 1;
+    transition: all 0.3 ease-in-out;
+  }
+  .iconStyle:hover {
+    transform: scale(1.1);
+    color: var(--hover-dark);
+  }
+}
+/* ANIMATIONS */
+
+@keyframes toVisible {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes moveButton {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}

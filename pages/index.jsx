@@ -5,7 +5,7 @@ import PresentationCard from '../src/components/CollectionComponents/Presentatio
 import styles from './PublicWrapper.module.css'
 import SkillList from '../src/components/CollectionComponents/Skills/SkillList'
 import CertificationList from '../src/components/CollectionComponents/Certifications/CertificationList'
-
+import ScrollToTop from '../src/components/ScrollToTop/ScrollToTop'
 const PublicWrapper = () => {
   const [page, setPage] = useState('personaldata')
   const [show, setShow] = useState(false)
@@ -32,6 +32,7 @@ const PublicWrapper = () => {
 
   return (
     <div className={styles.container}>
+      <ScrollToTop />
       <NavBar page={page} setPage={setPage} setShow={setShow} />
       {show && (
         <>

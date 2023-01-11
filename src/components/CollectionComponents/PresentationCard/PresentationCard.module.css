@@ -6,7 +6,7 @@
   display: grid;
   grid-template-rows: 70% 30%;
   gap: 20px;
-  /* place-items: center; */
+  font-weight: bold;
   padding: 5%;
 }
 

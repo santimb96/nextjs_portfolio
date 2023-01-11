@@ -9,14 +9,12 @@
 }
 
 .presentationCardContainer {
-  /* margin-top: 15%; */
   position: relative;
   top: 10%;
   width: 100%;
   min-height: 80%;
   display: grid;
   place-items: center;
-  /* padding-bottom: 20%; */
 }
 
 .skillsContainer {
@@ -39,9 +37,11 @@
 }
 
 @media (min-width: 768px) {
-  .skillsContainer {
+  .skillsContainer,
+  .certificationContainer {
+    top: 15%;
     justify-items: center;
     align-items: flex-start;
-    padding-bottom: 0;
+    padding-bottom: 20%;
   }
 }

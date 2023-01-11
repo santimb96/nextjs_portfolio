@@ -18,9 +18,9 @@
 
 @media (min-width: 768px) {
   .skillContainer {
-    grid-template-columns: repeat(4, 25%);
-    gap: 0;
+    /* grid-template-columns: repeat(4, 24.5%); */
+    gap: 0.5%;
     width: 80%;
-    height: 70%;
+    /* height: 100%; */
   }
 }

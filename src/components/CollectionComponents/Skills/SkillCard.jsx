@@ -5,21 +5,36 @@ import { CgCodeSlash } from 'react-icons/cg'
 import List from './List'
 import styles from './SkillCard.module.css'
 
-const SkillCard = ({ listName, collectionList }) => {
+const SkillCard = ({ listName, collectionList, description }) => {
+  const IMAGES = {
+    backend: 'express',
+    frontend: 'react',
+    database: 'mongodb',
+    utility: 'github'
+  }
   return (
-    <div className={styles.skillCard}>
-      <div className={styles.title}>
-        <h3>{SKILLS_DIC?.en[listName]}</h3>
+    <>
+      <div className={styles.card}>
+        <div className={styles.imgBackground} style={{ background: `url("/img/${IMAGES[listName]}.png") no-repeat center` }}></div>
+        <div className={styles.skillCard}>
+          <div className={styles.title}>
+            <h3>{SKILLS_DIC?.en[listName]}</h3>
+          </div>
+          <div className={styles.icons}>
+            <div className={styles.separator}></div>
+            <h4 className={styles.listTitle}>{'Preferidos'}</h4>
+            <GoFlame />
+            <h4 className={styles.listTitle}>{'Y también...'}</h4>
+            <CgCodeSlash />
+          </div>
+          <div className={styles.lists}>
+            <div className={styles.description}>{description}</div>
+            <List collection={collectionList?.preference} />
+            <List collection={collectionList?.other} />
+          </div>
+        </div>
       </div>
-      <div className={styles.icons}>
-        <GoFlame />
-        <CgCodeSlash />
-      </div>
-      <div className={styles.lists}>
-        <List collection={collectionList?.preference} />
-        <List collection={collectionList?.other} />
-      </div>
-    </div>
+    </>
   )
 }
 

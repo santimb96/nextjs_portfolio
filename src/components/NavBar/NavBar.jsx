@@ -31,11 +31,11 @@ const NavBar = ({ page, setPage, setShow }) => {
           {open ? <IoCloseOutline className={styles.buttonType} /> : <RxHamburgerMenu className={styles.buttonType} />}
         </button>
       </div>
-      <div className={open || match ? styles.navContainer : styles.displayNone}>
+      <nav className={open || match ? styles.navContainer : styles.displayNone}>
         {COLLECTIONS?.map((name, idx) => (
           <NavButton key={name} name={name?.toLowerCase()} duration={idx} setPage={setPage} isCurrentRoute={page === name?.toLowerCase()} />
         ))}
-      </div>
+      </nav>
     </>
   )
 }
