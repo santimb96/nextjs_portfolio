@@ -17,15 +17,7 @@
   place-items: center;
 }
 
-.skillsContainer {
-  position: relative;
-  top: 10%;
-  width: 100%;
-  min-height: 100%;
-  display: grid;
-  place-items: center;
-  padding-bottom: 30%;
-}
+.skillsContainer,
 .certificationContainer {
   position: relative;
   top: 10%;
@@ -33,7 +25,7 @@
   min-height: 100%;
   display: grid;
   place-items: center;
-  padding-bottom: 30%;
+  margin-bottom: 20%;
 }
 
 @media (min-width: 768px) {
@@ -42,6 +34,9 @@
     top: 15%;
     justify-items: center;
     align-items: flex-start;
-    padding-bottom: 20%;
+    margin-bottom: 10%;
+  }
+  .presentationCardContainer {
+    top: 15%;
   }
 }

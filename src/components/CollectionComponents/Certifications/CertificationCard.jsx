@@ -6,16 +6,9 @@ import Image from 'next/image'
 import useMediaQuery from '@mui/material/useMediaQuery'
 import styles from './CertificationCard.module.css'
 
-const CertificationCard = ({ props, idx }) => {
-  const { certification, course, degree, description, endDate, grade, institution, imgName } = props
+export const Field = ({ fieldName, field, link, imgName }) => {
   const MATCH = useMediaQuery('(min-width: 768px)')
-  const DATA = [
-    { field: institution, fieldName: 'Certifica' },
-    { field: grade, fieldName: 'Titulación' },
-    { field: endDate, fieldName: 'Año', field: certification, fieldName: 'Certificado', link: true }
-  ]
-
-  const field = (fieldName, field, link) => (
+  return (
     <div key={fieldName} className={styles.fields}>
       {link ? (
         MATCH ? (
@@ -39,6 +32,16 @@ const CertificationCard = ({ props, idx }) => {
       )}
     </div>
   )
+}
+
+const CertificationCard = ({ props, idx }) => {
+  const { certification, course, degree, description, endDate, grade, institution, imgName } = props
+
+  const DATA = [
+    { field: institution, fieldName: 'Certifica' },
+    { field: grade, fieldName: 'Titulación' },
+    { field: endDate, fieldName: 'Año', field: certification, fieldName: 'Certificado', link: true }
+  ]
 
   return (
     <div className={styles.certificationCard}>
@@ -47,7 +50,9 @@ const CertificationCard = ({ props, idx }) => {
           <h3>{degree}</h3>
         </div>
         <div className={styles.separator}></div>
-        {DATA?.map((elem) => field(elem.fieldName, elem.field, elem.link))}
+        {DATA?.map((elem) => (
+          <Field fieldName={elem?.fieldName} field={elem?.field} link={elem?.link} imgName={imgName} />
+        ))}
       </div>
       <div className={styles.extendedInformation}>
         {course ? <FaCertificate className={styles.icon} /> : <TbCertificate className={styles.icon} />}

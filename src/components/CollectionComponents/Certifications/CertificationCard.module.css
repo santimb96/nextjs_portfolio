@@ -5,8 +5,6 @@
   grid-template-columns: 50% 50%;
   color: var(--secondary-dark);
   font-weight: bold;
-  /* border: 1px solid var(--background-opacity); */
-  border-radius: 10px;
 }
 .separator {
   display: block;
@@ -22,6 +20,7 @@
   text-align: center;
   gap: 2.5%;
   padding: 5%;
+  border-radius: 10px 0 0 10px;
 }
 .fields {
   display: grid;
@@ -73,6 +72,7 @@
   background: var(--background-opacity);
   color: var(--secondary-dark);
   padding: 5%;
+  border-radius: 0 10px 10px 0;
 }
 .description {
   font-size: var(--text);
@@ -89,6 +89,7 @@
     width: 80%;
     background: var(--card-background-opacity);
     border: none;
+    border-radius: 10px;
   }
   .fields {
     display: grid;

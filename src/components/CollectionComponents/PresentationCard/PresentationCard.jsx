@@ -1,8 +1,21 @@
 import React, { useEffect, useState } from 'react'
 import { AiFillTags } from 'react-icons/ai'
+import { HiDownload } from 'react-icons/hi'
+import Typewriter from 'typewriter-effect'
 import getApiData from '../../../utils/apiData'
 import WaterSpinner from '../../WaterSpinner/WaterSpinner'
+import { saveAs } from 'file-saver'
 import styles from './PresentationCard.module.css'
+
+export const Description = ({ data }) => {
+  const fixText = data?.description.split('. ')
+  return fixText.map((sentence, idx) => (
+    <p key={idx}>
+      {sentence}
+      {sentence.includes('!') && !fixText[idx + 1] ? '' : '.'}
+    </p>
+  ))
+}
 
 const PresentationCard = ({ setFooterData }) => {
   const [showDescription, setShowDescription] = useState(false)
@@ -21,9 +34,8 @@ const PresentationCard = ({ setFooterData }) => {
       .finally(() => setLoading(false))
   }, [])
 
-  const splitByPoint = () => {
-    const fixText = personalData?.description.split('. ')
-    return fixText.map((sentence) => <p key={sentence}>{sentence}.</p>)
+  const downloadFile = () => {
+    saveAs('/assets/martinezSantiago.pdf', 'martinez_santiago_cv.pdf')
   }
 
   return (
@@ -34,10 +46,20 @@ const PresentationCard = ({ setFooterData }) => {
         <div className={styles.card}>
           <div className={showDescription ? styles.displayNone : styles.titleBody}>
             <h1 className={styles.title}>{personalData?.name}</h1>
-            <h2 className={styles.subtitle}>{personalData?.especialization}</h2>
+            <h2 className={styles.subtitle}>
+              <Typewriter
+                options={{
+                  strings: [personalData?.especialization],
+                  autoStart: true,
+                  loop: true
+                }}
+              />
+            </h2>
           </div>
           <div className={showDescription ? styles.descriptionBody : styles.displayNone}>
-            <div className={styles.description}>{splitByPoint()}</div>
+            <div className={styles.description}>
+              <Description data={personalData} />
+            </div>
             <div className={styles.tags}>
               {personalData?.personalSkills?.map((skill) => (
                 <div key={skill} className={styles.skillTag}>
@@ -48,9 +70,15 @@ const PresentationCard = ({ setFooterData }) => {
             </div>
           </div>
           <div className={styles.displayButton}>
-            <button className={styles.seeMoreOrLess} onClick={handleShowDescription}>
+            <button className={styles.personalDataButton} onClick={handleShowDescription}>
               Ver {showDescription ? 'menos' : 'más'}
             </button>
+            {showDescription && (
+              <button className={styles.personalDataButton} onClick={downloadFile}>
+                CV
+                <HiDownload />
+              </button>
+            )}
           </div>
         </div>
       )}
