@@ -1,0 +1,78 @@
+.card {
+  width: 100%;
+  min-height: 50vh;
+  background: var(--card-background-opacity);
+  border-radius: 10px;
+  padding: 5%;
+  color: var(--secondary-dark);
+  font-weight: bold;
+}
+
+.title {
+  font-size: var(--title);
+}
+
+.businessInformation {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+}
+
+.business,
+.city {
+  font-size: var(--subtitle);
+  margin: 0;
+  margin: 5% 0 5% 0;
+}
+.city {
+  font-size: var(--text);
+}
+
+.separator {
+  height: 2.5px;
+  background: var(--secondary-dark);
+}
+
+.years {
+  display: flex;
+  justify-content: flex-start;
+  gap: 1em;
+  color: var(--secondary-dark-opacity);
+}
+.years > p {
+  font-size: var(--text);
+  margin: 5% 0 5% 0;
+}
+.description {
+  min-height: 5em;
+  font-size: var(--text);
+  margin: 2% 0 2% 0;
+  background: var(--background-opacity);
+  border-radius: 10px;
+  padding: 5%;
+}
+.aptitudesTitle {
+  font-size: var(--subtitle);
+  margin: 5% 0 5% 0;
+}
+.aptitudes {
+  min-height: 5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+.aptitude {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 5px;
+  font-size: var(--tag);
+  background: var(--background-opacity);
+  padding: 1.5%;
+  border-radius: 5px;
+}
+.aptitude > p {
+  margin: 0;
+}

@@ -1,3 +1,5 @@
+const MONTHS = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre']
+
 const sortByEndDate = (data) => {
   const formattedData = data?.map((doc) => {
     doc.startDate = new Date(doc.startDate)
@@ -11,8 +13,8 @@ const sortByEndDate = (data) => {
 }
 
 const formatDate = (date) => {
-  const month = date.getMonth() + 1
-  return `${month >= 10 ? month : `0${month}`}/${date.getFullYear()}`
+  const month = date.getMonth()
+  return `${MONTHS[month].slice(0, 3)}. - ${date.getFullYear()}`
 }
 
 export { sortByEndDate, formatDate }

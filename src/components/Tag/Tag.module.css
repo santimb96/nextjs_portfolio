@@ -1,0 +1,20 @@
+.tag {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 5px;
+  font-size: var(--tag);
+  background: var(--background-opacity);
+  padding: 1.5%;
+  border-radius: 5px;
+}
+.tag > p {
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .tag {
+    background: none;
+    padding: 2%;
+  }
+}
