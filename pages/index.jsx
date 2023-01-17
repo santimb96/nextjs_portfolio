@@ -7,6 +7,7 @@ import SkillList from '../src/components/CollectionComponents/Skills/SkillList'
 import CertificationList from '../src/components/CollectionComponents/Certifications/CertificationList'
 import ScrollToTop from '../src/components/ScrollToTop/ScrollToTop'
 import ExperienceList from '../src/components/CollectionComponents/Experience/ExperienceList'
+
 const PublicWrapper = () => {
   const [page, setPage] = useState('personaldata')
   const [show, setShow] = useState(false)
