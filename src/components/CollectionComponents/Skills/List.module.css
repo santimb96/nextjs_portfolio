@@ -10,27 +10,27 @@
   height: 100%;
 }
 
-.list > p {
+/* .list > p {
   margin: 0;
   font-size: var(--tag);
   background: var(--background-opacity);
   padding: 2%;
   border-radius: 5px;
-}
+} */
 
 @media (min-width: 768px) {
   .list {
     gap: 5%;
     border-radius: 10px;
     background: var(--card-background-opacity);
+    flex-direction: column;
     height: 15rem;
     padding: 2.5%;
   }
-  .list > p {
+  /* .tag > .tag > p {
     width: 90%;
     background: none;
     /* font-size: var(--text); */
-    /* padding: 5%; */
-    /* height: 10%; */
-  }
+  /* padding: 5%; */
+  /* height: 10%; */
 }

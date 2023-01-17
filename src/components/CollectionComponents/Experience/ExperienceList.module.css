@@ -1,0 +1,24 @@
+.experienceList {
+  display: grid;
+  place-items: center;
+  gap: 1vh;
+  animation: toVisible 0.5s;
+  padding: 5%;
+}
+
+@media (min-width: 768px) {
+  .experienceList {
+    gap: 2.5vh;
+  }
+}
+
+/* ANIMATIONS */
+
+@keyframes toVisible {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

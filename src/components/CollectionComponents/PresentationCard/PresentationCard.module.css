@@ -4,7 +4,7 @@
   background: transparent;
   color: var(--secondary-dark);
   display: grid;
-  grid-template-rows: 70% 30%;
+  grid-template-rows: 85% 15%;
   place-items: center;
   gap: 20px;
   font-weight: bold;
@@ -13,8 +13,6 @@
 
 .titleBody,
 .descriptionBody {
-  height: 100%;
-  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -110,8 +108,9 @@
 @media (min-width: 768px) {
   .card {
     width: 80%;
+    /* height: 80%; */
     padding: 0%;
-    gap: 5px;
+    gap: 0;
   }
   .skillTag {
     width: 20%;
