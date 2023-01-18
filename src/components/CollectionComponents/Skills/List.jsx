@@ -6,7 +6,7 @@ const List = ({ collection }) => {
   return (
     <div className={styles.list}>
       {collection?.map((name) => (
-        <Tag className={styles.tag} text={name} />
+        <Tag key={name} text={name} />
       ))}
     </div>
   )

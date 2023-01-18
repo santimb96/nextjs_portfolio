@@ -51,7 +51,7 @@ const CertificationCard = ({ props, idx }) => {
         </div>
         <div className={styles.separator}></div>
         {DATA?.map((elem) => (
-          <Field fieldName={elem?.fieldName} field={elem?.field} link={elem?.link} imgName={imgName} />
+          <Field key={elem?.fieldName} fieldName={elem?.fieldName} field={elem?.field} link={elem?.link} imgName={imgName} />
         ))}
       </div>
       <div className={styles.extendedInformation}>
