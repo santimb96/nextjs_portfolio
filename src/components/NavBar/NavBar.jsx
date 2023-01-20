@@ -6,7 +6,7 @@ import { IoCloseOutline } from 'react-icons/io5'
 import useMediaQuery from '@mui/material/useMediaQuery'
 import styles from './NavBar.module.css'
 
-const NavBar = ({ page, setPage, setShow }) => {
+const NavBar = ({ page, setShow }) => {
   const [open, setOpen] = useState(false)
   const match = useMediaQuery('(min-width: 768px)')
   const handleOpen = () => {
@@ -33,7 +33,7 @@ const NavBar = ({ page, setPage, setShow }) => {
       </div>
       <nav className={open || match ? styles.navContainer : styles.displayNone}>
         {PAGES?.map((name, idx) => (
-          <NavButton key={name} name={name?.toLowerCase()} duration={idx} setPage={setPage} isCurrentRoute={page === name?.toLowerCase()} />
+          <NavButton key={name} name={name?.toLowerCase()} duration={idx} isCurrentRoute={page === name?.toLowerCase()} />
         ))}
       </nav>
     </>

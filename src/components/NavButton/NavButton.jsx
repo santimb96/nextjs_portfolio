@@ -3,7 +3,7 @@ import { useRouter } from 'next/router'
 import styles from './NavButton.module.css'
 import { COLLECTIONS_DIC } from '../../utils/translationDictionary'
 
-const NavButton = ({ name, duration, setPage, isCurrentRoute }) => {
+const NavButton = ({ name, duration, isCurrentRoute }) => {
   const { push } = useRouter()
   return (
     <>

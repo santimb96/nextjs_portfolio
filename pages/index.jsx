@@ -55,7 +55,7 @@ const PublicWrapper = () => {
   return (
     <div className={styles.container}>
       <ScrollToTop />
-      <NavBar page={page} setPage={setPage} setShow={setShow} />
+      <NavBar page={page} setShow={setShow} />
       {show && (
         <>
           {PAGE_COMPONENT[page]}
