@@ -1,3 +1,4 @@
 const PAGES = ['personaldata', 'skills', 'certifications', 'experience']
+const HOME_PAGE = 'personaldata'
 
-export { PAGES }
+export { PAGES, HOME_PAGE }
