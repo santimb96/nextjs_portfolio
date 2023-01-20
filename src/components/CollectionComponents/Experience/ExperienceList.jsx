@@ -19,7 +19,9 @@ const ExperienceList = () => {
       .finally(() => setLoading(false))
   }, [])
   return (
-    <div className={styles.experienceList}>{loading ? <WaterSpinner /> : experience?.map((doc) => <ExperienceCard props={doc} />)}</div>
+    <div className={styles.experienceList}>
+      {loading ? <WaterSpinner /> : experience?.map((doc) => <ExperienceCard key={doc?.business} props={doc} />)}
+    </div>
   )
 }
 

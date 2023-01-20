@@ -3,7 +3,7 @@ const COLLECTIONS_DIC = {
     // English
     skills: 'Habilidades',
     experience: 'Experiencia',
-    certification: 'Estudios',
+    certifications: 'Estudios',
     personaldata: 'Datos personales'
   }
 }

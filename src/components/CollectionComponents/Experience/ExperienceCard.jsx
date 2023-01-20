@@ -25,7 +25,7 @@ const ExperienceCard = ({ props }) => {
       <h3 className={styles.aptitudesTitle}>Aptitudes:</h3>
       <div className={styles.aptitudes}>
         {aptitudes?.map((aptitude) => (
-          <Tag Icon={BsCheck} text={aptitude} />
+          <Tag key={aptitude} Icon={BsCheck} text={aptitude} />
         ))}
       </div>
     </div>
