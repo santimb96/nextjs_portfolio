@@ -3,11 +3,12 @@
   place-items: center;
   gap: 1vh;
   animation: toVisible 0.5s;
-  padding: var(--desktop-padding);
+  padding: var(--mobile-padding);
 }
 
 @media (min-width: 768px) {
   .experienceList {
+    padding: var(--desktop-padding);
     gap: 2.5vh;
   }
 }

@@ -57,9 +57,9 @@ const CertificationCard = ({ props, idx }) => {
       </div>
       <div className={styles.extendedInformation}>
         {course ? <FaCertificate className={styles.icon} /> : <TbCertificate className={styles.icon} />}
-        <p className={styles.description}>
+        <div className={styles.description}>
           <Text text={description} />
-        </p>
+        </div>
       </div>
     </div>
   )
