@@ -10,14 +10,6 @@
   height: 100%;
 }
 
-/* .list > p {
-  margin: 0;
-  font-size: var(--tag);
-  background: var(--background-opacity);
-  padding: 2%;
-  border-radius: 5px;
-} */
-
 @media (min-width: 768px) {
   .list {
     gap: 5%;
@@ -27,10 +19,9 @@
     height: 15rem;
     padding: 2.5%;
   }
-  /* .tag > .tag > p {
-    width: 90%;
-    background: none;
-    /* font-size: var(--text); */
-  /* padding: 5%; */
-  /* height: 10%; */
+}
+@media screen and (min-device-width: 768px) and (orientation: landscape) {
+  .list {
+    height: 14rem;
+  }
 }

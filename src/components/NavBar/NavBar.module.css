@@ -60,6 +60,11 @@
     justify-content: center;
   }
 }
+@media screen and (min-device-width: 768px) and (orientation: landscape) {
+  .navContainer {
+    height: 20vh;
+  }
+}
 
 /* ANIMATIONS */
 @keyframes toVisible {
