@@ -140,7 +140,7 @@
     padding: 5%;
   }
 }
-@media screen and (min-device-width: 768px) and (orientation: landscape) {
+@media screen and (min-device-width: 768px) and (max-device-height: 600px) and (orientation: landscape) {
   .certificationCard {
     min-height: 100vh;
   }
@@ -149,7 +149,7 @@
   }
   .fields > h4,
   .fields > p {
-    font-size: var(--tags);
+    font-size: var(--landscape-text);
   }
   .extendedInformation {
     grid-template-rows: 25% 75%;
@@ -157,7 +157,7 @@
   .description {
     align-self: flex-start;
     overflow: auto;
-    font-size: var(--tags);
+    font-size: var(--landscape-text);
     height: 12rem;
   }
 }

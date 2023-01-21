@@ -60,7 +60,7 @@
     justify-content: center;
   }
 }
-@media screen and (min-device-width: 768px) and (orientation: landscape) {
+@media screen and (min-device-width: 768px) and (max-device-height: 600px) and (orientation: landscape) {
   .navContainer {
     height: 20vh;
   }
