@@ -14,7 +14,6 @@
   min-height: 70vh;
   display: grid;
   place-items: center;
-  padding-bottom: 20vh;
 }
 
 .skillsContainer,
@@ -27,6 +26,20 @@
   padding-bottom: 20vh;
 }
 
+@media screen and (max-device-width: 767px) and (orientation: landscape) {
+  .presentationCardContainer {
+    margin-top: 15vh;
+    min-height: 65vh;
+    padding-bottom: 20vh;
+  }
+  .skillsContainer,
+  .certificationContainer,
+  .experienceContainer {
+    margin-top: 15vh;
+    padding-bottom: 30vh;
+  }
+}
+
 @media (min-width: 768px) {
   .skillsContainer,
   .certificationContainer,
@@ -34,6 +47,7 @@
     margin-top: 15vh;
   }
   .presentationCardContainer {
+    padding-bottom: 20vh;
     margin-top: 15vh;
     min-height: 65vh;
   }

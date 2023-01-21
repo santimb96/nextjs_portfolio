@@ -1,7 +1,7 @@
 .skillContainer {
   display: grid;
   place-items: center;
-  gap: 1vh;
+  gap: 2.5vh;
   animation: toVisible 0.5s;
   padding: var(--mobile-padding);
   width: 100%;
