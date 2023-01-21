@@ -2,6 +2,7 @@ import React from 'react'
 import { FaCertificate } from 'react-icons/fa'
 import { TbCertificate } from 'react-icons/tb'
 import { BiLink } from 'react-icons/bi'
+import Text from '../../Text/Text'
 import Image from 'next/image'
 import useMediaQuery from '@mui/material/useMediaQuery'
 import styles from './CertificationCard.module.css'
@@ -56,7 +57,9 @@ const CertificationCard = ({ props, idx }) => {
       </div>
       <div className={styles.extendedInformation}>
         {course ? <FaCertificate className={styles.icon} /> : <TbCertificate className={styles.icon} />}
-        <p className={styles.description}>{description}</p>
+        <p className={styles.description}>
+          <Text text={description} />
+        </p>
       </div>
     </div>
   )

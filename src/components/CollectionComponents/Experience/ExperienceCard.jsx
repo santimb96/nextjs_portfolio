@@ -1,5 +1,6 @@
 import React from 'react'
 import { formatDate } from '../../../utils/utilities'
+import Text from '../../Text/Text'
 import Tag from '../../Tag/Tag'
 import { BsCheck } from 'react-icons/bs'
 import styles from './ExperienceCard.module.css'
@@ -21,7 +22,9 @@ const ExperienceCard = ({ props }) => {
         <p>{start}</p>
         <p>{end}</p>
       </div>
-      <p className={styles.description}>{description}</p>
+      <p className={styles.description}>
+        <Text text={description} />
+      </p>
       <h3 className={styles.aptitudesTitle}>Aptitudes:</h3>
       <div className={styles.aptitudes}>
         {aptitudes?.map((aptitude) => (

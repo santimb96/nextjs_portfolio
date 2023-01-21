@@ -6,13 +6,12 @@
 }
 .card {
   padding: 2.5%;
-  width: 90%;
+  width: 100%;
   background: var(--card-background-opacity);
   border-radius: 10px;
 }
 
 .skillCard {
-  width: 100%;
   font-weight: bold;
   height: 20vh;
   color: var(--secondary-dark);
@@ -29,7 +28,6 @@
 }
 
 .title > h3 {
-  width: 100%;
   word-wrap: break-word;
   margin: 0;
   text-align: center;
@@ -56,29 +54,33 @@
     display: grid;
     place-items: center;
     width: 100%;
-    height: 80vh;
+    min-height: 85vh;
   }
   .imgBackground {
+    position: absolute;
+    top: 0;
     border-radius: 10px;
     display: flex;
-    height: 100%;
+    min-height: 85vh;
     width: 100%;
     filter: grayscale(100%) contrast(100%);
   }
   .description {
     align-items: center;
     background: var(--card-background-opacity);
-    height: 20rem;
+    height: 18em;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
     padding: 5%;
     border-radius: 10px;
     font-size: var(--text);
-    display: flex;
   }
   .skillCard {
     border-radius: 10px;
     grid-template-columns: 100%;
     width: 100%;
-    height: 100%;
+    min-height: 85vh;
     position: absolute;
     top: 0;
     filter: drop-shadow(0 0 0.025rem rgb(0, 0, 0));

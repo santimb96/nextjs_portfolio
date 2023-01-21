@@ -3,6 +3,7 @@
   place-items: center;
   gap: 1vh;
   animation: toVisible 0.5s;
+  padding: var(--desktop-padding);
 }
 
 @media (min-width: 768px) {
