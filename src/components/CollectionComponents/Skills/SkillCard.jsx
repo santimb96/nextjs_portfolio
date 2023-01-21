@@ -2,6 +2,7 @@ import React from 'react'
 import { SKILLS_DIC } from '../../../utils/translationDictionary'
 import { GoFlame } from 'react-icons/go'
 import { CgCodeSlash } from 'react-icons/cg'
+import Text from '../../Text/Text'
 import List from './List'
 import styles from './SkillCard.module.css'
 
@@ -28,7 +29,9 @@ const SkillCard = ({ listName, collectionList, description }) => {
             <CgCodeSlash />
           </div>
           <div className={styles.lists}>
-            <div className={styles.description}>{description}</div>
+            <div className={styles.description}>
+              <Text text={description} />
+            </div>
             <List collection={collectionList?.preference} />
             <List collection={collectionList?.other} />
           </div>

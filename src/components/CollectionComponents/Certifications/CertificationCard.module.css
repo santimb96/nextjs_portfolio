@@ -1,6 +1,6 @@
 .certificationCard {
-  width: 90%;
-  height: 50vh;
+  width: 100%;
+  min-height: 50vh;
   display: grid;
   grid-template-columns: 50% 50%;
   color: var(--secondary-dark);
@@ -18,8 +18,9 @@
   display: grid;
   place-items: center;
   text-align: center;
-  gap: 2.5%;
+  gap: 1em;
   padding: 5%;
+  min-height: 100%;
   border-radius: 10px 0 0 10px;
 }
 .fields {
@@ -36,7 +37,6 @@
 
 .fields > h4 {
   font-size: var(--subtitle);
-  /* border-bottom: 1px solid; */
 }
 .fields > p {
   font-size: var(--text);
@@ -81,12 +81,13 @@
 
 .icon {
   font-size: var(--certification-card-icon);
+  padding: 2.5%;
 }
 
 @media (min-width: 768px) {
   .certificationCard {
     height: 80vh;
-    width: 80%;
+    width: 100%;
     background: var(--card-background-opacity);
     border: none;
     border-radius: 10px;
@@ -120,7 +121,7 @@
     border-bottom: none;
   }
   .fields > p {
-    text-align: start;
+    text-align: center;
   }
   .img {
     object-fit: contain;

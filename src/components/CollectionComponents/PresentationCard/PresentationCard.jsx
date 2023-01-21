@@ -1,21 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import { AiFillTags } from 'react-icons/ai'
 import { HiDownload } from 'react-icons/hi'
+import Text from '../../Text/Text'
 import Typewriter from 'typewriter-effect'
 import getApiData from '../../../utils/apiData'
 import WaterSpinner from '../../WaterSpinner/WaterSpinner'
 import { saveAs } from 'file-saver'
 import styles from './PresentationCard.module.css'
-
-export const Description = ({ data }) => {
-  const fixText = data?.description.split('. ')
-  return fixText.map((sentence, idx) => (
-    <p key={idx}>
-      {sentence}
-      {sentence.includes('!') && !fixText[idx + 1] ? '' : '.'}
-    </p>
-  ))
-}
 
 const PresentationCard = ({ setFooterData }) => {
   const [showDescription, setShowDescription] = useState(false)
@@ -58,7 +49,7 @@ const PresentationCard = ({ setFooterData }) => {
           </div>
           <div className={showDescription ? styles.descriptionBody : styles.displayNone}>
             <div className={styles.description}>
-              <Description data={personalData} />
+              <Text text={personalData?.description} />
             </div>
             <div className={styles.tags}>
               {personalData?.personalSkills?.map((skill) => (

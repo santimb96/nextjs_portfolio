@@ -8,12 +8,11 @@ import SkillList from '../src/components/CollectionComponents/Skills/SkillList'
 import CertificationList from '../src/components/CollectionComponents/Certifications/CertificationList'
 import ScrollToTop from '../src/components/ScrollToTop/ScrollToTop'
 import ExperienceList from '../src/components/CollectionComponents/Experience/ExperienceList'
-import { PAGES } from '../src/utils/router'
+import { PAGES, HOME_PAGE } from '../src/utils/router'
 
 const PublicWrapper = () => {
-  const { push, query, isReady, events } = useRouter()
+  const { push, query, isReady } = useRouter()
 
-  const prevPage = useRef('personaldata')
   const [page, setPage] = useState('personaldata')
   const [show, setShow] = useState(false)
   const [footerData, setFooterData] = useState({})
@@ -47,6 +46,11 @@ const PublicWrapper = () => {
     }
     if (PAGES.indexOf(query?.page) === -1 && query?.page) {
       push('/404')
+      return
+    }
+    if (query?.page === HOME_PAGE || !query?.page) {
+      window.history.replaceState(null, '', '/')
+      setPage('personaldata')
       return
     }
     return setPage(query?.page)

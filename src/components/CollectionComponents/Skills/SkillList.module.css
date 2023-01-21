@@ -1,9 +1,9 @@
 .skillContainer {
   display: grid;
-  grid-template-columns: 100%;
   place-items: center;
-  gap: 5vh;
+  gap: 1vh;
   animation: toVisible 0.5s;
+  padding: var(--mobile-padding);
   width: 100%;
 }
 
@@ -18,9 +18,7 @@
 
 @media (min-width: 768px) {
   .skillContainer {
-    /* grid-template-columns: repeat(4, 24.5%); */
+    padding: var(--desktop-padding);
     gap: 2.5vh;
-    width: 80%;
-    /* height: 100%; */
   }
 }

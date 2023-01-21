@@ -14,6 +14,7 @@
   min-height: 70vh;
   display: grid;
   place-items: center;
+  padding-bottom: 20vh;
 }
 
 .skillsContainer,
@@ -33,7 +34,7 @@
     margin-top: 15vh;
   }
   .presentationCardContainer {
-    margin-top: 12.5vh;
-    min-height: 67.5vh;
+    margin-top: 15vh;
+    min-height: 65vh;
   }
 }
