@@ -3,10 +3,12 @@
   min-height: 50vh;
   background: transparent;
   color: var(--secondary-dark);
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
+  display: grid;
+  place-items: center;
   gap: 1em;
   font-weight: bold;
   padding: 5%;
@@ -21,6 +23,9 @@
   align-self: center;
   animation-name: toVisible;
   animation-duration: 0.5s;
+}
+.titleBody {
+  min-height: 20em;
 }
 .descriptionBody {
   min-height: 20em;
@@ -111,7 +116,7 @@
 
 @media (min-width: 768px) {
   .card {
-    gap: 2.5vh;
+    gap: 0.5vh;
     padding: 0;
   }
   .skillTag {
