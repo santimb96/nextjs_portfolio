@@ -5,14 +5,14 @@ import { CgCodeSlash } from 'react-icons/cg'
 import Text from '../../Text/Text'
 import List from './List'
 import styles from './SkillCard.module.css'
+const IMAGES = {
+  backend: 'express',
+  frontend: 'react',
+  database: 'mongodb',
+  utility: 'github'
+}
 
 const SkillCard = ({ listName, collectionList, description }) => {
-  const IMAGES = {
-    backend: 'express',
-    frontend: 'react',
-    database: 'mongodb',
-    utility: 'github'
-  }
   return (
     <>
       <div className={styles.card}>

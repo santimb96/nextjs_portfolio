@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import getApiData from '../../../utils/apiData'
 import WaterSpinner from '../../WaterSpinner/WaterSpinner'
 import SkillCard from './SkillCard'
-import styles from './SkillList.module.css'
+import styles from '../CollectionList/CollectionList.module.css'
 
 const SkillList = () => {
   const [skills, setSkills] = useState({})
@@ -24,7 +24,7 @@ const SkillList = () => {
       {loading ? (
         <WaterSpinner />
       ) : (
-        <div className={styles.skillContainer}>
+        <div className={styles.collectionList}>
           {skillsList
             .sort((a, b) => (a > b ? 1 : -1))
             ?.map((listName, idx) => (

@@ -16,9 +16,7 @@
   place-items: center;
 }
 
-.skillsContainer,
-.certificationContainer,
-.experienceContainer {
+.commonContainer {
   margin-top: 10vh;
   min-height: 100vh;
   display: grid;
@@ -27,9 +25,7 @@
 }
 
 @media (min-width: 768px) {
-  .skillsContainer,
-  .certificationContainer,
-  .experienceContainer {
+  .commonContainer {
     margin-top: 15vh;
   }
   .presentationCardContainer {
@@ -44,9 +40,7 @@
     min-height: 100vh;
     padding-bottom: 30vh;
   }
-  .skillsContainer,
-  .certificationContainer,
-  .experienceContainer {
+  .commonContainer {
     margin-top: 25vh;
     padding-bottom: 30vh;
   }

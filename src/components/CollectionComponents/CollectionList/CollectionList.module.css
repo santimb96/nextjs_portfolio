@@ -1,15 +1,15 @@
-.experienceList {
+.collectionList {
+  width: 100%;
   display: grid;
   place-items: center;
-  gap: 1vh;
+  gap: 2.5vh;
   animation: toVisible 0.5s;
   padding: var(--mobile-padding);
 }
 
 @media (min-width: 768px) {
-  .experienceList {
+  .collectionList {
     padding: var(--desktop-padding);
-    gap: 2.5vh;
   }
 }
 

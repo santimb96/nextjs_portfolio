@@ -29,7 +29,7 @@
 }
 
 .separator {
-  height: 2.5px;
+  height: var(--separator);
   background: var(--secondary-dark);
 }
 
