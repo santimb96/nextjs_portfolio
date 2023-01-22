@@ -11,6 +11,7 @@
   --icon: clamp(16px, 2.6389vw + 6.5px, 35px);
   --certification-card-icon: clamp(50px, 6.9444vw + 25px, 100px);
 
+  --landscape-text: clamp(10px, 0.8333vw + 7px, 16px);
   --mobile-padding: 0% 5% 0% 5%;
   --desktop-padding: 0% 15% 0% 15%;
 }

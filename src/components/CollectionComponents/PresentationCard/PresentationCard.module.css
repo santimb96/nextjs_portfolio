@@ -3,10 +3,6 @@
   min-height: 50vh;
   background: transparent;
   color: var(--secondary-dark);
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; */
   display: grid;
   place-items: center;
   gap: 1em;
@@ -123,12 +119,7 @@
     width: 20%;
   }
   .descriptionBody {
-    /* padding: 2.5%; */
     width: 65%;
-  }
-  .description > p {
-    /* width: 3000ch; */
-    /* margin: 1%; */
   }
   .personalDataButton {
     width: 150px;
@@ -142,5 +133,18 @@
   }
   .tags {
     display: none;
+  }
+}
+@media screen and (min-device-width: 768px) and (max-device-height: 600px) and (orientation: landscape) {
+  .card {
+    min-height: 100vh;
+  }
+  .title,
+  .subtitle {
+    font-size: var(--text);
+  }
+  .description > p,
+  .personalDataButton {
+    font-size: var(--landscape-text);
   }
 }

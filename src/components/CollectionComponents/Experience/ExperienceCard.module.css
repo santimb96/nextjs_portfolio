@@ -76,3 +76,15 @@
 .aptitude > p {
   margin: 0;
 }
+@media screen and (min-device-width: 768px) and (max-device-height: 600px) and (orientation: landscape) {
+  .title,
+  .aptitudesTitle {
+    font-size: var(--text);
+  }
+  .business,
+  .city,
+  .years > p,
+  .description {
+    font-size: var(--landscape-text);
+  }
+}

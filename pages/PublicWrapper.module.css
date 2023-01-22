@@ -26,20 +26,6 @@
   padding-bottom: 20vh;
 }
 
-@media screen and (max-device-width: 767px) and (orientation: landscape) {
-  .presentationCardContainer {
-    margin-top: 15vh;
-    min-height: 65vh;
-    padding-bottom: 20vh;
-  }
-  .skillsContainer,
-  .certificationContainer,
-  .experienceContainer {
-    margin-top: 15vh;
-    padding-bottom: 30vh;
-  }
-}
-
 @media (min-width: 768px) {
   .skillsContainer,
   .certificationContainer,
@@ -50,5 +36,18 @@
     padding-bottom: 20vh;
     margin-top: 15vh;
     min-height: 65vh;
+  }
+}
+@media screen and (min-device-width: 768px) and (max-device-height: 600px) and (orientation: landscape) {
+  .presentationCardContainer {
+    margin-top: 25vh;
+    min-height: 100vh;
+    padding-bottom: 30vh;
+  }
+  .skillsContainer,
+  .certificationContainer,
+  .experienceContainer {
+    margin-top: 25vh;
+    padding-bottom: 30vh;
   }
 }
