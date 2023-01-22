@@ -8,7 +8,7 @@
 }
 .separator {
   display: block;
-  height: 1.5px;
+  height: var(--separator);
   width: 100%;
   background: var(--secondary-dark);
 }

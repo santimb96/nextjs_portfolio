@@ -1,16 +1,23 @@
 :root {
+  /* BUTTONS */
   --navbar-button-complete-screen: clamp(12px, 1.1111vw + 8px, 20px);
   --close-or-open: clamp(20px, 2.7778vw + 10px, 40px);
   --button: clamp(100px, 13.8889vw + 50px, 200px);
+
+  /* TEXT SIZES */
   --tag: clamp(10px, 0.8333vw + 7px, 16px);
-  /* --text: clamp(16px, 2.6389vw + 6.5px, 35px); */
   --text: clamp(14px, 0.9722vw + 10.5px, 21px);
   --footer-text: clamp(10px, 0.8333vw + 7px, 16px);
   --title: clamp(18px, 2.3611vw + 9.5px, 35px);
   --subtitle: clamp(16px, 1.9444vw + 9px, 30px);
+
+  /* ICON SIZES */
   --icon: clamp(16px, 2.6389vw + 6.5px, 35px);
   --certification-card-icon: clamp(50px, 6.9444vw + 25px, 100px);
 
+  --separator: 1.5px;
+
+  /* LANDSCAPE SIZES */
   --landscape-text: clamp(10px, 0.8333vw + 7px, 16px);
   --mobile-padding: 0% 5% 0% 5%;
   --desktop-padding: 0% 15% 0% 15%;
