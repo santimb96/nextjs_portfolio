@@ -7,9 +7,6 @@ import styles from './ExperienceCard.module.css'
 const ExperienceCard = ({ props }) => {
   const { city, workFunction, aptitudes, business, description, endDate, startDate } = props
 
-  const start = formatDate(startDate)
-  const end = formatDate(endDate)
-
   return (
     <div className={styles.card}>
       <h2 className={styles.title}>{workFunction}</h2>
@@ -19,8 +16,8 @@ const ExperienceCard = ({ props }) => {
         <h4 className={styles.city}>{city}</h4>
       </div>
       <div className={styles.years}>
-        <p>{start}</p>
-        <p>{end}</p>
+        <p>{formatDate(startDate)}</p>
+        <p>{formatDate(endDate)}</p>
       </div>
       <p className={styles.description}>
         <Text text={description} />
