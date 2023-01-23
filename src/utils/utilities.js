@@ -2,8 +2,8 @@ const MONTHS = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 
 
 const sortByEndDate = (data) => {
   const formattedData = data?.map((doc) => {
-    doc.startDate = new Date(doc?.startDate)
     if (doc?.startDate) {
+      doc.startDate = new Date(doc?.startDate)
       doc.endDate = new Date(doc?.endDate)
     }
     return doc
