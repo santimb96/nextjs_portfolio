@@ -2,10 +2,9 @@ const MONTHS = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 
 
 const sortByEndDate = (data) => {
   const formattedData = data?.map((doc) => {
-    if (doc?.startDate) {
-      doc.startDate = new Date(doc?.startDate)
-      doc.endDate = new Date(doc?.endDate)
-    }
+    doc?.startDate && (doc.startDate = new Date(doc?.startDate))
+    doc.endDate = new Date(doc?.endDate)
+
     return doc
   })
 
@@ -14,7 +13,6 @@ const sortByEndDate = (data) => {
 
 const formatDate = (date) => {
   const month = date.getMonth()
-  console.log(MONTHS[month], date)
   return `${MONTHS[month]?.slice(0, 3)}. - ${date.getFullYear()}`
 }
 
