@@ -140,9 +140,9 @@
   .skillCard {
     min-height: 100vh;
   }
-  .imgBackground {
+  /* .imgBackground {
     min-height: 100vh;
-  }
+  } */
   .description,
   .lists {
     align-items: flex-start;
