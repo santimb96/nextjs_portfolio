@@ -16,7 +16,7 @@ const SkillCard = ({ listName, collectionList, description }) => {
   return (
     <>
       <div className={styles.card}>
-        <div className={styles.imgBackground} style={{ background: `url("/img/${IMAGES[listName]}.png") no-repeat center` }}></div>
+        <div className={styles.imgBackground} style={{ background: `url("/img/${IMAGES[listName]}.webp") no-repeat center` }}></div>
         <div className={styles.skillCard}>
           <div className={styles.title}>
             <h3>{SKILLS_DIC?.en[listName]}</h3>
