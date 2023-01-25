@@ -58,11 +58,12 @@
   }
 
   .imgBackground {
+    object-fit: scale-down;
     position: absolute;
     top: 0;
     border-radius: 10px;
     display: flex;
-    min-height: 85vh;
+    height: 100%;
     width: 100%;
     filter: grayscale(100%) contrast(100%);
   }

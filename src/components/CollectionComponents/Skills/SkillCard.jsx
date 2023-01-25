@@ -2,6 +2,7 @@ import React from 'react'
 import { SKILLS_DIC } from '../../../utils/translationDictionary'
 import { GoFlame } from 'react-icons/go'
 import { CgCodeSlash } from 'react-icons/cg'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 import Text from '../../Text/Text'
 import List from './List'
 import styles from './SkillCard.module.css'
@@ -16,7 +17,11 @@ const SkillCard = ({ listName, collectionList, description }) => {
   return (
     <>
       <div className={styles.card}>
-        <div className={styles.imgBackground} style={{ background: `url("/img/${IMAGES[listName]}.webp") no-repeat center` }}></div>
+        <LazyLoadImage
+          className={styles.imgBackground}
+          src={`/img/${IMAGES[listName]}.webp`}
+          // style={{ background: `url("/img/${IMAGES[listName]}.webp") no-repeat center` }}
+        />
         <div className={styles.skillCard}>
           <div className={styles.title}>
             <h3>{SKILLS_DIC?.en[listName]}</h3>

@@ -5,6 +5,7 @@ import { formatDate } from '../../../utils/utilities'
 import { AiOutlineClose, AiOutlinePlus, AiFillGithub } from 'react-icons/ai'
 import { CgCodeSlash } from 'react-icons/cg'
 import { GrDeploy } from 'react-icons/gr'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 import styles from './ProjectCard.module.css'
 const ProjectCard = ({ props }) => {
   const { business, deployment, description, endDate, imgName, name, repository, languages } = props
@@ -14,7 +15,12 @@ const ProjectCard = ({ props }) => {
   return (
     <>
       <div className={styles.card}>
-        <div className={styles.imgBackground} style={{ background: `url("/img/${imgName}.webp") no-repeat center` }}></div>
+        <LazyLoadImage
+          className={styles.imgBackground}
+          loading='lazy'
+          src={`/img/${imgName}.webp`}
+          // style={{ background: `url("/img/${imgName}.webp") no-repeat center` }}
+        />
         <div className={!show ? `${styles.title}` : `${styles.displayNone}`}>
           <div className={styles.openOptions}>
             <h2 className={styles.name}>{name}</h2>
