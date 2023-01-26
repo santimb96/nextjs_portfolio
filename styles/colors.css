@@ -3,6 +3,8 @@
   --primary-clear: #d4cdc1;
   --letter-clear: #e6e7de;
 
+  --navbar-opacity: rgb(16, 16, 16);
+  --title-opacity: rgba(16, 16, 16, 0.433);
   --card-background-opacity: rgba(71, 71, 71, 0.164);
   --background-opacity: rgba(255, 246, 246, 0.1);
   --primary-dark: #111112;

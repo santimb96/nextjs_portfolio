@@ -76,6 +76,21 @@
 .aptitude > p {
   margin: 0;
 }
+@media (min-width: 768px) {
+  .card {
+    min-height: 70vh;
+  }
+  .description {
+    height: fit-content;
+    padding: 2.5%;
+  }
+  .aptitudesTitle {
+    margin: 0;
+  }
+  .years > p {
+    margin: 0;
+  }
+}
 @media screen and (min-device-width: 768px) and (max-device-height: 600px) and (orientation: landscape) {
   .title,
   .aptitudesTitle {

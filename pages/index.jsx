@@ -20,7 +20,8 @@ const PublicWrapper = () => {
     personaldata: <PresentationCard setFooterData={setFooterData} />,
     skills: <SkillList />,
     certifications: <CollectionList listType={'certification'} sort={true} />,
-    experience: <CollectionList listType={'experience'} sort={true} />
+    experience: <CollectionList listType={'experience'} sort={true} />,
+    projects: <CollectionList listType={'project'} sort={true} />
   }
 
   useEffect(() => {

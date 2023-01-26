@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import ExperienceCard from '../Experience/ExperienceCard'
 import CertificationCard from '../Certifications/CertificationCard'
+import ProjectCard from '../Projects/ProjectCard'
 import getApiData from '../../../utils/apiData'
 import { sortByEndDate } from '../../../utils/utilities'
 import WaterSpinner from '../../WaterSpinner/WaterSpinner'
@@ -8,7 +9,8 @@ import styles from './CollectionList.module.css'
 
 const COMPONENTS = {
   experience: ExperienceCard,
-  certification: CertificationCard
+  certification: CertificationCard,
+  project: ProjectCard
 }
 
 const CollectionList = ({ listType, sort }) => {

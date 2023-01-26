@@ -1,15 +1,14 @@
 .collectionList {
-  width: 100%;
+  width: 90%;
   display: grid;
   place-items: center;
   gap: 2.5vh;
   animation: toVisible 0.5s;
-  padding: var(--mobile-padding);
 }
 
 @media (min-width: 768px) {
   .collectionList {
-    padding: var(--desktop-padding);
+    width: 60%;
   }
 }
 

@@ -24,24 +24,14 @@
   padding-bottom: 20vh;
 }
 
-@media (min-width: 768px) {
-  .commonContainer {
-    margin-top: 15vh;
-  }
-  .presentationCardContainer {
-    padding-bottom: 20vh;
-    margin-top: 15vh;
-    min-height: 65vh;
-  }
-}
 @media screen and (min-device-width: 768px) and (max-device-height: 600px) and (orientation: landscape) {
   .presentationCardContainer {
-    margin-top: 25vh;
+    margin-top: 20vh;
     min-height: 100vh;
     padding-bottom: 30vh;
   }
   .commonContainer {
-    margin-top: 25vh;
+    margin-top: 20vh;
     padding-bottom: 30vh;
   }
 }

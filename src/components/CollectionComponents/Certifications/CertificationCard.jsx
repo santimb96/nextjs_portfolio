@@ -16,7 +16,7 @@ export const Field = ({ fieldName, field, link, imgName }) => {
           <>
             <h4>{fieldName}</h4>
             <a href={field} target='_blank'>
-              <Image className={styles.img} src={`/img/${imgName}.png`} alt={imgName} width={50} height={50} />
+              <Image className={styles.img} src={`/img/${imgName}.webp`} alt={imgName} width={50} height={50} />
               <BiLink />
             </a>
           </>
@@ -35,7 +35,7 @@ export const Field = ({ fieldName, field, link, imgName }) => {
   )
 }
 
-const CertificationCard = ({ props, idx }) => {
+const CertificationCard = ({ props }) => {
   const { certification, course, degree, description, endDate, grade, institution, imgName } = props
 
   const DATA = [
