@@ -4,7 +4,7 @@ const COLLECTIONS_DIC = {
     skills: 'Habilidades',
     experience: 'Experiencia',
     certifications: 'Estudios',
-    personaldata: 'Datos personales',
+    personaldata: 'Sobre mí',
     projects: 'Proyectos'
   }
 }

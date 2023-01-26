@@ -7,7 +7,7 @@
   display: grid;
   place-items: center;
   width: 100%;
-  min-height: 90vh;
+  min-height: 85vh;
   border-radius: 10px;
   padding: 2.5%;
   color: var(--secondary-dark);
@@ -22,6 +22,9 @@
   width: 100%;
   filter: grayscale(100%) contrast(100%);
   object-fit: scale-down;
+}
+.name {
+  font-size: var(--title);
 }
 .title {
   position: absolute;
@@ -38,7 +41,6 @@
   border-radius: 10px;
   display: grid;
   grid-template-columns: 100%;
-  gap: 1.5%;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -50,6 +52,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
+  height: fit-content;
 }
 
 .openOptions {
@@ -109,6 +112,7 @@
   background: var(--background-opacity);
   padding: 2.5%;
   border-radius: 5px;
+  height: fit-content;
 }
 .languages {
   display: grid;
@@ -141,6 +145,57 @@
 }
 .link > svg {
   font-size: var(--text);
+}
+
+@media (min-width: 768px) {
+  .card {
+    min-height: 70vh;
+  }
+  .language {
+    margin: 0;
+  }
+  .openOptions {
+    margin: 0;
+  }
+  .title {
+    padding: 2.5%;
+  }
+  .description {
+    padding: 2.5%;
+  }
+  .links {
+    align-items: center;
+  }
+  .link {
+    max-width: 150px;
+    height: 40px;
+  }
+  .close {
+    font-size: var(--text);
+    padding: 0.5%;
+    width: 30px;
+  }
+  .moreInfo {
+    padding: 0;
+    font-size: var(--text);
+    height: 50%;
+    width: 50%;
+  }
+}
+@media screen and (min-device-width: 768px) and (max-device-height: 600px) and (orientation: landscape) {
+  .card {
+    min-height: 90vh;
+  }
+  .title {
+    font-size: var(--text);
+  }
+  .business,
+  .endDate,
+  .description > p,
+  .language,
+  .link {
+    font-size: var(--landscape-text);
+  }
 }
 
 @keyframes toVisible {

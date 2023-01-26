@@ -15,12 +15,7 @@ const ProjectCard = ({ props }) => {
   return (
     <>
       <div className={styles.card}>
-        <LazyLoadImage
-          className={styles.imgBackground}
-          loading='lazy'
-          src={`/img/${imgName}.webp`}
-          // style={{ background: `url("/img/${imgName}.webp") no-repeat center` }}
-        />
+        <LazyLoadImage className={styles.imgBackground} loading='lazy' src={`/img/${imgName}.webp`} />
         <div className={!show ? `${styles.title}` : `${styles.displayNone}`}>
           <div className={styles.openOptions}>
             <h2 className={styles.name}>{name}</h2>

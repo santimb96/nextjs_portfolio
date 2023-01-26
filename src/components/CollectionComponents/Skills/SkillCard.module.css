@@ -54,7 +54,7 @@
     display: grid;
     place-items: center;
     width: 100%;
-    min-height: 85vh;
+    min-height: 70vh;
   }
 
   .imgBackground {
@@ -69,13 +69,13 @@
   }
   .description {
     background: var(--card-background-opacity);
-    max-height: 23rem;
+    height: 20rem;
     overflow: auto;
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    padding: 5%;
+    padding: 2.5%;
     border-radius: 10px;
     font-size: var(--text);
   }
@@ -86,7 +86,7 @@
     border-radius: 10px;
     grid-template-columns: 100%;
     width: 100%;
-    min-height: 85vh;
+    height: 100%;
     position: absolute;
     top: 0;
     filter: drop-shadow(0 0 0.025rem rgb(0, 0, 0));
@@ -140,9 +140,7 @@
   .skillCard {
     min-height: 100vh;
   }
-  /* .imgBackground {
-    min-height: 100vh;
-  } */
+
   .description,
   .lists {
     align-items: flex-start;

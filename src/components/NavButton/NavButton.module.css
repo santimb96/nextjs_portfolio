@@ -23,8 +23,8 @@
   .navButton {
     font-size: var(--navbar-button-complete-screen);
     left: 0;
-    height: 70%;
-    width: 15%;
+    height: 80%;
+    width: 12%;
     text-align: center;
     border-left: none;
     animation: none;
