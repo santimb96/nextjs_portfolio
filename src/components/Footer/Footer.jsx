@@ -11,7 +11,7 @@ const Footer = ({ name, socialMedia }) => {
   }
 
   return (
-    <div className={styles.footerCard}>
+    <>
       <div className={styles.text}>
         <p className={styles.textContent}>
           Con mucho <BsSuitHeartFill className={styles.iconGap} /> santimb96 - 2022
@@ -24,7 +24,7 @@ const Footer = ({ name, socialMedia }) => {
           </a>
         ))}
       </div>
-    </div>
+    </>
   )
 }
 

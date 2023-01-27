@@ -1,6 +1,10 @@
 .topToBtm {
   position: relative;
 }
+.clearColor {
+  color: var(--secondary-clear) !important;
+  background: var(--primary-clear) !important;
+}
 .iconPosition {
   position: fixed;
   bottom: 40px;
@@ -12,7 +16,6 @@
   height: 30px;
   background: var(--primary-dark);
   border-radius: 50%;
-  color: var(--secondary-dark);
   cursor: pointer;
   animation: moveButton 1.5s ease-in-out infinite, toVisible 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;

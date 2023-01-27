@@ -2,6 +2,7 @@ import React from 'react'
 import { FaCertificate } from 'react-icons/fa'
 import { TbCertificate } from 'react-icons/tb'
 import { BiLink } from 'react-icons/bi'
+import Button from '../../Button/Button'
 import Text from '../../Text/Text'
 import Image from 'next/image'
 import useMediaQuery from '@mui/material/useMediaQuery'
@@ -21,9 +22,7 @@ export const Field = ({ fieldName, field, link, imgName }) => {
             </a>
           </>
         ) : (
-          <a href={field} target='_blank'>
-            Certificado <BiLink />
-          </a>
+          <Button Icon={BiLink} text='Certificado' handle={() => window.open(field)} />
         )
       ) : (
         <>

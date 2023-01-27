@@ -1,34 +1,34 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import Text from '../../Text/Text'
 import Tag from '../../Tag/Tag'
+import Button from '../../Button/Button'
+import { BackgroundContext } from '../../../../contexts/BackgroundContext'
 import { formatDate } from '../../../utils/utilities'
 import { AiOutlineClose, AiOutlinePlus, AiFillGithub } from 'react-icons/ai'
 import { CgCodeSlash } from 'react-icons/cg'
-import { GrDeploy } from 'react-icons/gr'
+import { GoBrowser } from 'react-icons/go'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
 import styles from './ProjectCard.module.css'
 const ProjectCard = ({ props }) => {
   const { business, deployment, description, endDate, imgName, name, repository, languages } = props
 
+  const { dark } = useContext(BackgroundContext)
   const [show, setShow] = useState(false)
 
   return (
     <>
       <div className={styles.card}>
         <LazyLoadImage className={styles.imgBackground} loading='lazy' src={`/img/${imgName}.webp`} />
-        <div className={!show ? `${styles.title}` : `${styles.displayNone}`}>
+        <div className={!show ? `${styles.title} ${!dark && styles.clearColor}` : `${styles.displayNone}`}>
           <div className={styles.openOptions}>
             <h2 className={styles.name}>{name}</h2>
-            <button className={styles.moreInfo} onClick={() => setShow(true)}>
-              <AiOutlinePlus />
-              Info
-            </button>
+            <Button Icon={AiOutlinePlus} text='Info' handle={() => setShow(true)} />
           </div>
           <div className={styles.separator}></div>
         </div>
-        <div className={show ? `${styles.content}` : `${styles.displayNone}`}>
+        <div className={show ? `${styles.content} ${!dark && styles.clearColor}` : `${styles.displayNone}`}>
           <div className={styles.closeOptions}>
-            <button className={styles.close} onClick={() => setShow(false)}>
+            <button className={`${styles.close} ${!dark && styles.clearColor}`} onClick={() => setShow(false)}>
               <AiOutlineClose />
             </button>
           </div>
@@ -48,16 +48,8 @@ const ProjectCard = ({ props }) => {
             </div>
           </div>
           <div className={styles.links}>
-            {deployment !== '' && (
-              <a className={styles.link} target='_blank' href={deployment}>
-                <GrDeploy />
-                Despliegue
-              </a>
-            )}
-            <a className={styles.link} target='_blank' href={repository}>
-              <AiFillGithub />
-              Repositorio
-            </a>
+            {deployment !== '' && <Button Icon={GoBrowser} handle={() => window.open(deployment)} />}
+            <Button Icon={AiFillGithub} handle={() => window.open(repository)} />
           </div>
         </div>
       </div>

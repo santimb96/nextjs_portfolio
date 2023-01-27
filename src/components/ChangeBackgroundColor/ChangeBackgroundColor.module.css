@@ -1,3 +1,7 @@
+.clearColor {
+  color: var(--secondary-clear) !important;
+}
+
 .changeColor {
   border: none;
   background: transparent;

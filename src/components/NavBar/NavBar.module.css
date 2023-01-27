@@ -1,3 +1,7 @@
+.clearColor {
+  color: var(--secondary-clear) !important;
+}
+
 .menuButtonContainer {
   position: fixed;
   top: 0;
@@ -19,11 +23,11 @@
   justify-self: flex-end;
   background: transparent;
   font-size: var(--close-or-open);
+  color: var(--secondary-dark);
   border: none;
 }
 
 .buttonType {
-  color: var(--secondary-dark);
   animation-name: toVisible;
   animation-duration: 0.5s;
 }
@@ -33,6 +37,7 @@
 }
 
 .navContainer {
+  color: var(--secondary-dark);
   position: absolute;
   background: transparent;
   top: 10%;

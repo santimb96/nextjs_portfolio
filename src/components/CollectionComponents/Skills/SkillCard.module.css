@@ -14,7 +14,6 @@
 .skillCard {
   font-weight: bold;
   height: 20vh;
-  color: var(--secondary-dark);
   display: grid;
   grid-template-columns: 30% 10% 60%;
 }

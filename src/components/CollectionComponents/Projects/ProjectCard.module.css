@@ -1,6 +1,10 @@
 .displayNone {
   display: none !important;
 }
+.clearColor {
+  background: rgba(255, 255, 255, 0.701) !important;
+  color: var(--secondary-clear) !important;
+}
 
 .card {
   position: relative;
@@ -10,7 +14,6 @@
   min-height: 85vh;
   border-radius: 10px;
   padding: 2.5%;
-  color: var(--secondary-dark);
   font-weight: bold;
 }
 

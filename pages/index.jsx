@@ -46,22 +46,20 @@ const PublicWrapper = ({ setIsDark, isDark }) => {
     return setPage(query?.page)
   }, [query, isReady, dark])
 
-  // useEffect(() => {
-  //   setIsDark(dark)
-  // }, [dark])
-
   return (
     <div className={styles.container}>
-      <ScrollToTop />
+      <ScrollToTop dark={dark} />
       <NavBar page={page} setShow={setShow} />
       {show && (
         <>
           {page === 'personaldata' ? (
-            <div className={styles.presentationCardContainer}>{PAGE_COMPONENT[page]}</div>
+            <div className={`${styles.presentationCardContainer} ${!dark && styles.clearColor}`}>{PAGE_COMPONENT[page]}</div>
           ) : (
-            <div className={styles.commonContainer}>{PAGE_COMPONENT[page]}</div>
+            <div className={`${styles.commonContainer} ${!dark && styles.clearColor}`}>{PAGE_COMPONENT[page]}</div>
           )}
-          <Footer name={footerData?.name} socialMedia={footerData?.socialMedia} />
+          <div className={`${styles.footerCard} ${!dark && styles.clearColor}`}>
+            <Footer name={footerData?.name} socialMedia={footerData?.socialMedia} />
+          </div>
         </>
       )}
     </div>
