@@ -1,0 +1,10 @@
+.changeColor {
+  border: none;
+  background: transparent;
+  color: var(--secondary-dark);
+  font-size: var(--close-or-open);
+  display: flex;
+  align-items: center;
+  margin: 0% 0% 0% 5%;
+  transition: all 0.5s ease-in-out;
+}

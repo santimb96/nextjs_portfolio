@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react'
+import React, { useEffect, useState, useContext } from 'react'
 import { useRouter } from 'next/router'
 import CollectionList from '../src/components/CollectionComponents/CollectionList/CollectionList'
 import Footer from '../src/components/Footer/Footer'
@@ -7,11 +7,13 @@ import PresentationCard from '../src/components/CollectionComponents/Presentatio
 import styles from './PublicWrapper.module.css'
 import SkillList from '../src/components/CollectionComponents/Skills/SkillList'
 import ScrollToTop from '../src/components/ScrollToTop/ScrollToTop'
+import { BackgroundContext } from '../contexts/BackgroundContext'
 import { PAGES, HOME_PAGE } from '../src/utils/router'
 
-const PublicWrapper = () => {
+const PublicWrapper = ({ setIsDark, isDark }) => {
   const { push, query, isReady } = useRouter()
 
+  const { dark, setDark } = useContext(BackgroundContext)
   const [page, setPage] = useState('personaldata')
   const [show, setShow] = useState(false)
   const [footerData, setFooterData] = useState({})
@@ -25,6 +27,10 @@ const PublicWrapper = () => {
   }
 
   useEffect(() => {
+    if (isDark !== dark) {
+      setIsDark(dark)
+      return
+    }
     if (!isReady) {
       return
     }
@@ -38,7 +44,11 @@ const PublicWrapper = () => {
       return
     }
     return setPage(query?.page)
-  }, [query, isReady])
+  }, [query, isReady, dark])
+
+  // useEffect(() => {
+  //   setIsDark(dark)
+  // }, [dark])
 
   return (
     <div className={styles.container}>

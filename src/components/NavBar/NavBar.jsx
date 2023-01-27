@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react'
 import NavButton from '../NavButton/NavButton'
+import ChangeBackgroundColor from '../ChangeBackgroundColor/ChangeBackgroundColor'
 import { PAGES } from '../../utils/router'
 import { RxHamburgerMenu } from 'react-icons/rx'
 import { IoCloseOutline } from 'react-icons/io5'
@@ -36,6 +37,7 @@ const NavBar = ({ page, setShow }) => {
   return (
     <>
       <div className={styles.menuButtonContainer}>
+        <ChangeBackgroundColor />
         <button className={styles.menuButton} onClick={handleOpen}>
           {open ? <IoCloseOutline className={styles.buttonType} /> : <RxHamburgerMenu className={styles.buttonType} />}
         </button>
