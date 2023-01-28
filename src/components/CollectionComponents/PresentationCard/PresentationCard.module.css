@@ -121,16 +121,6 @@
   .descriptionBody {
     width: fit-content;
   }
-  .personalDataButton {
-    width: 150px;
-    height: 40px;
-    margin: 0;
-    transition: 0.3s all ease-in-out;
-    padding: 1%;
-  }
-  .personalDataButton:hover {
-    background: var(--hover-dark);
-  }
   .tags {
     display: none;
   }

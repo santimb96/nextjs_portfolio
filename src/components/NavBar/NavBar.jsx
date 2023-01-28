@@ -12,7 +12,7 @@ const NavBar = ({ page, setShow }) => {
   const { dark } = useContext(BackgroundContext)
   const navRef = useRef(0)
   const [open, setOpen] = useState(false)
-  const match = useMediaQuery('(min-width: 768px)')
+  const MATCH = useMediaQuery('(min-width: 768px)')
 
   const handleOpen = () => {
     if (open) {
@@ -45,7 +45,8 @@ const NavBar = ({ page, setShow }) => {
           {open ? <IoCloseOutline className={styles.buttonType} /> : <RxHamburgerMenu className={styles.buttonType} />}
         </button>
       </div>
-      <nav ref={navRef} className={open || match ? styles.navContainer : styles.displayNone}>
+      <nav ref={navRef} className={open || MATCH ? styles.navContainer : styles.displayNone}>
+        {open || (MATCH && <ChangeBackgroundColor />)}
         {PAGES?.map((name, idx) => (
           <NavButton key={name} dark={dark} name={name?.toLowerCase()} duration={idx} isCurrentRoute={page === name?.toLowerCase()} />
         ))}

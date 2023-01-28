@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { SKILLS_DIC } from '../../../utils/translationDictionary'
 import { GoFlame } from 'react-icons/go'
 import { CgCodeSlash } from 'react-icons/cg'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
+import { useMediaQuery } from '@mui/material'
+import { BackgroundContext } from '../../../../contexts/BackgroundContext'
 import Text from '../../Text/Text'
 import List from './List'
 import styles from './SkillCard.module.css'
@@ -14,15 +16,13 @@ const IMAGES = {
 }
 
 const SkillCard = ({ listName, collectionList, description }) => {
+  const MATCH = useMediaQuery('(min-width: 768px)')
+  const { dark } = useContext(BackgroundContext)
   return (
     <>
       <div className={styles.card}>
-        <LazyLoadImage
-          className={styles.imgBackground}
-          src={`/img/${IMAGES[listName]}.webp`}
-          // style={{ background: `url("/img/${IMAGES[listName]}.webp") no-repeat center` }}
-        />
-        <div className={styles.skillCard}>
+        <LazyLoadImage className={styles.imgBackground} src={`/img/${IMAGES[listName]}.webp`} />
+        <div className={`${styles.skillCard} ${!dark && MATCH && styles.clearColor}`}>
           <div className={styles.title}>
             <h3>{SKILLS_DIC?.en[listName]}</h3>
           </div>

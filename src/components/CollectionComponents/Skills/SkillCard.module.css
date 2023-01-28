@@ -64,7 +64,7 @@
     display: flex;
     height: 100%;
     width: 100%;
-    filter: grayscale(100%) contrast(100%);
+    filter: grayscale(100%) contrast(100%) blur(2.5px);
   }
   .description {
     background: var(--card-background-opacity);
@@ -80,6 +80,10 @@
   }
   .description > p {
     margin-top: 0.5rem;
+  }
+  .clearColor {
+    filter: none !important;
+    background: rgba(255, 255, 255, 0.5) !important;
   }
   .skillCard {
     border-radius: 10px;

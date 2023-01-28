@@ -24,6 +24,7 @@
 } */
 @media (min-width: 768px) {
   .button {
+    cursor: pointer;
     width: 150px;
     height: 40px;
     margin: 0;
