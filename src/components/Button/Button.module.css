@@ -1,0 +1,34 @@
+.clearColor {
+  color: var(--primary-clear) !important;
+  background: var(--secondary-clear) !important;
+}
+
+.button {
+  color: var(--primary-dark);
+  font-weight: bold;
+  width: var(--button);
+  font-size: var(--text);
+  background: var(--secondary-dark);
+  padding: 1.5% 2.5% 1.5% 2.5%;
+  font-family: inherit;
+  border: none;
+  border-radius: 5px;
+  animation-name: toVisible;
+  animation-duration: 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+/* .button > svg {
+  color: var(--primary-dark);
+} */
+@media (min-width: 768px) {
+  .button {
+    cursor: pointer;
+    width: 150px;
+    height: 40px;
+    margin: 0;
+    transition: 0.3s all ease-in-out;
+    padding: 1%;
+  }
+}

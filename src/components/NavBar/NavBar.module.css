@@ -1,25 +1,33 @@
+.clearColor {
+  color: var(--secondary-clear) !important;
+}
+
 .menuButtonContainer {
   position: fixed;
   top: 0;
   z-index: 999;
   height: 10vh;
   width: 100%;
-  background: var(--primary-dark);
-  display: flex;
+  background: transparent;
+  /* display: flex;
   flex-direction: row;
   justify-content: flex-end;
+  align-items: center; */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   align-items: center;
 }
 
 .menuButton {
-  margin: 2.5% 5% 0% 0%;
+  margin: 0% 5% 0% 0%;
+  justify-self: flex-end;
   background: transparent;
   font-size: var(--close-or-open);
+  color: var(--secondary-dark);
   border: none;
 }
 
 .buttonType {
-  color: var(--secondary-dark);
   animation-name: toVisible;
   animation-duration: 0.5s;
 }
@@ -29,8 +37,9 @@
 }
 
 .navContainer {
+  color: var(--secondary-dark);
   position: absolute;
-  background: var(--primary-dark);
+  background: transparent;
   top: 10%;
   z-index: 998;
   height: 90vh;

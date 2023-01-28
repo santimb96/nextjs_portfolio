@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import { AiFillTags } from 'react-icons/ai'
 import { HiDownload } from 'react-icons/hi'
 import Text from '../../Text/Text'
+import Tag from '../../Tag/Tag'
+import Button from '../../Button/Button'
 import Typewriter from 'typewriter-effect'
 import getApiData from '../../../utils/apiData'
 import WaterSpinner from '../../WaterSpinner/WaterSpinner'
@@ -54,22 +56,14 @@ const PresentationCard = ({ setFooterData }) => {
             <div className={styles.tags}>
               {personalData?.personalSkills?.map((skill) => (
                 <div key={skill} className={styles.skillTag}>
-                  <AiFillTags />
-                  {skill}
+                  <Tag Icon={AiFillTags} text={skill} />
                 </div>
               ))}
             </div>
           </div>
           <div className={styles.displayButton}>
-            <button className={styles.personalDataButton} onClick={handleShowDescription}>
-              Ver {showDescription ? 'menos' : 'más'}
-            </button>
-            {showDescription && (
-              <button className={styles.personalDataButton} onClick={downloadFile}>
-                CV
-                <HiDownload />
-              </button>
-            )}
+            <Button text={showDescription ? 'Ver menos' : 'Ver más'} handle={handleShowDescription} />
+            {showDescription && <Button Icon={HiDownload} text={'CV'} handle={downloadFile} />}
           </div>
         </div>
       )}

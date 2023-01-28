@@ -3,7 +3,6 @@
   min-height: 50vh;
   display: grid;
   grid-template-columns: 50% 50%;
-  color: var(--secondary-dark);
   font-weight: bold;
 }
 .separator {
@@ -70,7 +69,6 @@
   place-items: center;
   text-align: center;
   background: var(--background-opacity);
-  color: var(--secondary-dark);
   padding: 5%;
   border-radius: 0 10px 10px 0;
 }
