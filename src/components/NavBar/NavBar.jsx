@@ -10,7 +10,7 @@ import styles from './NavBar.module.css'
 
 const NavBar = ({ page, setShow }) => {
   const { dark } = useContext(BackgroundContext)
-  const navRef = useRef(0)
+  // const navRef = useRef(0)
   const [open, setOpen] = useState(false)
   const MATCH = useMediaQuery('(min-width: 768px)')
 
@@ -25,28 +25,28 @@ const NavBar = ({ page, setShow }) => {
   }
 
   useEffect(() => {
-    const navElem = navRef.current
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 50) {
-        navElem.classList.add(styles.backgroundDarker)
-      } else {
-        navElem.classList.remove(styles.backgroundDarker)
-      }
-    })
+    // const navElem = navRef.current
+    // window.addEventListener('scroll', () => {
+    //   if (window.scrollY > 50) {
+    //     navElem.classList.add(styles.backgroundOpacity)
+    //   } else {
+    //     navElem.classList.remove(styles.backgroundOpacity)
+    //   }
+    // })
     setOpen(false)
     setShow(true)
   }, [page])
 
   return (
     <>
-      <div className={styles.menuButtonContainer}>
+      <div className={`${styles.menuButtonContainer} ${!dark && styles.backgroundClear}`}>
         <ChangeBackgroundColor />
         <button className={`${styles.menuButton} ${!dark && styles.clearColor}`} onClick={handleOpen}>
           {open ? <IoCloseOutline className={styles.buttonType} /> : <RxHamburgerMenu className={styles.buttonType} />}
         </button>
       </div>
-      <nav ref={navRef} className={open || MATCH ? styles.navContainer : styles.displayNone}>
-        {open || (MATCH && <ChangeBackgroundColor />)}
+      <nav className={open || MATCH ? `${styles.navContainer} ${!dark && styles.backgroundClear}` : styles.displayNone}>
+        {MATCH && <ChangeBackgroundColor />}
         {PAGES?.map((name, idx) => (
           <NavButton key={name} dark={dark} name={name?.toLowerCase()} duration={idx} isCurrentRoute={page === name?.toLowerCase()} />
         ))}

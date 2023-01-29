@@ -11,7 +11,7 @@ function MyApp({ Component, pageProps }) {
     <>
       <BackgroundProvider>
         <Component setIsDark={setIsDark} isDark={isDark} {...pageProps} />
-        <style jsx global>
+        <style jsx global='true'>
           {`
             body {
               transition: all 0.3s ease-in-out;
