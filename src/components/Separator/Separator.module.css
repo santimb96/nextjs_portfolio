@@ -1,0 +1,11 @@
+.darkColor {
+  transition: all 0.3s ease-in-out;
+  background: var(--secondary-dark) !important;
+}
+
+.separator {
+  display: block;
+  height: var(--separator);
+  width: 100%;
+  background: var(--secondary-clear);
+}

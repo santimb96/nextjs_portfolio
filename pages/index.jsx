@@ -13,7 +13,7 @@ import { PAGES, HOME_PAGE } from '../src/utils/router'
 const PublicWrapper = ({ setIsDark, isDark }) => {
   const { push, query, isReady } = useRouter()
 
-  const { dark, setDark } = useContext(BackgroundContext)
+  const { dark } = useContext(BackgroundContext)
   const [page, setPage] = useState('personaldata')
   const [show, setShow] = useState(false)
   const [footerData, setFooterData] = useState({})
@@ -53,11 +53,11 @@ const PublicWrapper = ({ setIsDark, isDark }) => {
       {show && (
         <>
           {page === 'personaldata' ? (
-            <div className={`${styles.presentationCardContainer} ${!dark && styles.clearColor}`}>{PAGE_COMPONENT[page]}</div>
+            <div className={`${styles.presentationCardContainer} ${!dark && styles.darkColor}`}>{PAGE_COMPONENT[page]}</div>
           ) : (
-            <div className={`${styles.commonContainer} ${!dark && styles.clearColor}`}>{PAGE_COMPONENT[page]}</div>
+            <div className={`${styles.commonContainer} ${!dark && styles.darkColor}`}>{PAGE_COMPONENT[page]}</div>
           )}
-          <div className={`${styles.footerCard} ${!dark && styles.clearColor}`}>
+          <div className={`${styles.footerCard} ${!dark && styles.darkColor}`}>
             <Footer name={footerData?.name} socialMedia={footerData?.socialMedia} />
           </div>
         </>

@@ -5,7 +5,7 @@ import '../styles/colors.css'
 import '../styles/sizes.css'
 
 function MyApp({ Component, pageProps }) {
-  const [isDark, setIsDark] = useState(true)
+  const [isDark, setIsDark] = useState(false)
 
   return (
     <>

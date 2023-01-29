@@ -6,8 +6,10 @@ import { LazyLoadImage } from 'react-lazy-load-image-component'
 import { useMediaQuery } from '@mui/material'
 import { BackgroundContext } from '../../../../contexts/BackgroundContext'
 import Text from '../../Text/Text'
+import Separator from '../../Separator/Separator'
 import List from './List'
 import styles from './SkillCard.module.css'
+
 const IMAGES = {
   backend: 'express',
   frontend: 'react',
@@ -22,12 +24,12 @@ const SkillCard = ({ listName, collectionList, description }) => {
     <>
       <div className={styles.card}>
         <LazyLoadImage className={styles.imgBackground} src={`/img/${IMAGES[listName]}.webp`} />
-        <div className={`${styles.skillCard} ${!dark && MATCH && styles.clearColor}`}>
+        <div className={`${styles.skillCard} ${dark && MATCH && styles.darkColor}`}>
           <div className={styles.title}>
             <h3>{SKILLS_DIC?.en[listName]}</h3>
           </div>
           <div className={styles.icons}>
-            <div className={styles.separator}></div>
+            <Separator />
             <h4 className={styles.listTitle}>{'Preferidos'}</h4>
             <GoFlame />
             <h4 className={styles.listTitle}>{'Y también...'}</h4>

@@ -2,6 +2,7 @@ import React from 'react'
 import { formatDate } from '../../../utils/utilities'
 import Text from '../../Text/Text'
 import Tag from '../../Tag/Tag'
+import Separator from '../../Separator/Separator'
 import { BsCheck } from 'react-icons/bs'
 import styles from './ExperienceCard.module.css'
 const ExperienceCard = ({ props }) => {
@@ -10,7 +11,7 @@ const ExperienceCard = ({ props }) => {
   return (
     <div className={styles.card}>
       <h2 className={styles.title}>{workFunction}</h2>
-      <div className={styles.separator}></div>
+      <Separator />
       <div className={styles.businessInformation}>
         <h3 className={styles.business}>{business}</h3>
         <h4 className={styles.city}>{city}</h4>

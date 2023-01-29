@@ -4,7 +4,7 @@ import { TbCertificate } from 'react-icons/tb'
 import { BiLink } from 'react-icons/bi'
 import Button from '../../Button/Button'
 import Text from '../../Text/Text'
-import Image from 'next/image'
+import Separator from '../../Separator/Separator'
 import useMediaQuery from '@mui/material/useMediaQuery'
 import styles from './CertificationCard.module.css'
 
@@ -43,7 +43,7 @@ const CertificationCard = ({ props }) => {
         <div className={styles.degree}>
           <h3>{degree}</h3>
         </div>
-        <div className={styles.separator}></div>
+        <Separator />
         {DATA?.map((elem) => (
           <Field key={elem?.fieldName} fieldName={elem?.fieldName} field={elem?.field} link={elem?.link} imgName={imgName} />
         ))}

@@ -2,7 +2,6 @@
   width: 100%;
   min-height: 50vh;
   background: transparent;
-  /* color: var(--secondary-dark); */
   display: grid;
   place-items: center;
   gap: 1em;
@@ -81,21 +80,6 @@
   justify-content: center;
   gap: 10%;
   width: 100%;
-}
-
-.skillTag {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /* gap: 5px;
-  width: 25%;
-  background: var(--background-opacity);
-  padding: 1% 2.5% 1% 2.5%;
-  color: var(--secondary-dark);
-  font-family: inherit;
-  font-size: var(--tag);
-  border: none;
-  border-radius: 10px; */
 }
 
 /* ANIMATIONS */

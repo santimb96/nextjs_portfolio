@@ -9,7 +9,7 @@ const NavButton = ({ dark, name, duration, isCurrentRoute }) => {
     <>
       <button
         onClick={() => push(`?page=${name}`)}
-        className={`${styles.navButton} ${!dark && styles.clearColor} ${isCurrentRoute ? styles.currentRoute : ''}`}
+        className={`${styles.navButton} ${dark && styles.darkColor} ${isCurrentRoute ? styles.currentRoute : ''}`}
         style={{ animationDelay: duration / 10 + 's' }}
       >
         {COLLECTIONS_DIC?.en[name]}

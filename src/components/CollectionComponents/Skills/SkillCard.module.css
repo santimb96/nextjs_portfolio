@@ -81,9 +81,10 @@
   .description > p {
     margin-top: 0.5rem;
   }
-  .clearColor {
-    filter: none !important;
-    background: rgba(255, 255, 255, 0.5) !important;
+  .darkColor {
+    transition: all 0.3s ease-in-out;
+    filter: drop-shadow(0 0 0.025rem rgb(0, 0, 0)) !important;
+    background: rgba(50, 50, 50, 0.5) !important;
   }
   .skillCard {
     border-radius: 10px;
@@ -92,8 +93,7 @@
     height: 100%;
     position: absolute;
     top: 0;
-    filter: drop-shadow(0 0 0.025rem rgb(0, 0, 0));
-    background: rgba(50, 50, 50, 0.5);
+    background: rgba(255, 255, 255, 0.5);
     display: grid;
     grid-template-rows: 15% 5% 80%;
   }
