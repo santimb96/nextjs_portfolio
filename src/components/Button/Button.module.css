@@ -6,7 +6,8 @@
 .button {
   color: var(--primary-dark);
   font-weight: bold;
-  width: var(--button);
+  /* width: var(--button);
+  max-height: 30px; */
   font-size: var(--text);
   background: var(--secondary-dark);
   padding: 1.5% 2.5% 1.5% 2.5%;
@@ -19,9 +20,7 @@
   align-items: center;
   justify-content: space-evenly;
 }
-/* .button > svg {
-  color: var(--primary-dark);
-} */
+
 @media (min-width: 768px) {
   .button {
     cursor: pointer;

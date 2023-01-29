@@ -13,18 +13,12 @@ export const Field = ({ fieldName, field, link, imgName }) => {
   return (
     <div key={fieldName} className={styles.fields}>
       {link ? (
-        MATCH ? (
-          <>
-            <h4>{fieldName}</h4>
-            <a href={field} target='_blank'>
-              <Image className={styles.img} src={`/img/${imgName}.webp`} alt={imgName} width={50} height={50} />
-              <BiLink />
-            </a>
-          </>
-        ) : (
+        <>
+          {MATCH && <h4>{fieldName}</h4>}
           <Button Icon={BiLink} text='Certificado' handle={() => window.open(field)} />
-        )
+        </>
       ) : (
+        // )
         <>
           <h4>{fieldName}</h4>
           <p>{field}</p>

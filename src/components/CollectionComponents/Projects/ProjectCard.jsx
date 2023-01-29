@@ -48,8 +48,8 @@ const ProjectCard = ({ props }) => {
             </div>
           </div>
           <div className={styles.links}>
-            {deployment !== '' && <Button Icon={GoBrowser} handle={() => window.open(deployment)} />}
-            <Button Icon={AiFillGithub} handle={() => window.open(repository)} />
+            {deployment !== '' && <Button Icon={GoBrowser} text={'Despliegue'} handle={() => window.open(deployment)} />}
+            <Button Icon={AiFillGithub} text={'Repositorio'} handle={() => window.open(repository)} />
           </div>
         </div>
       </div>
