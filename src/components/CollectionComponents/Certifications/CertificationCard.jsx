@@ -8,7 +8,7 @@ import Separator from '../../Separator/Separator'
 import useMediaQuery from '@mui/material/useMediaQuery'
 import styles from './CertificationCard.module.css'
 
-export const Field = ({ fieldName, field, link, imgName }) => {
+export const Field = ({ fieldName, field, link }) => {
   const MATCH = useMediaQuery('(min-width: 768px)')
   return (
     <div key={fieldName} className={styles.fields}>
@@ -45,7 +45,7 @@ const CertificationCard = ({ props }) => {
         </div>
         <Separator />
         {DATA?.map((elem) => (
-          <Field key={elem?.fieldName} fieldName={elem?.fieldName} field={elem?.field} link={elem?.link} imgName={imgName} />
+          <Field key={elem?.fieldName} fieldName={elem?.fieldName} field={elem?.field} link={elem?.link} />
         ))}
       </div>
       <div className={styles.extendedInformation}>

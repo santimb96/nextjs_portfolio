@@ -8,7 +8,7 @@ import styles from './PublicWrapper.module.css'
 import SkillList from '../src/components/CollectionComponents/Skills/SkillList'
 import ScrollToTop from '../src/components/ScrollToTop/ScrollToTop'
 import { BackgroundContext } from '../contexts/BackgroundContext'
-import { PAGES, HOME_PAGE } from '../src/utils/router'
+import { PAGES, HOME_PAGE } from '../src/utils/constants'
 
 const PublicWrapper = ({ setIsDark, isDark }) => {
   const { push, query, isReady } = useRouter()
@@ -53,11 +53,11 @@ const PublicWrapper = ({ setIsDark, isDark }) => {
       {show && (
         <>
           {page === 'personaldata' ? (
-            <div className={`${styles.presentationCardContainer} ${!dark && styles.darkColor}`}>{PAGE_COMPONENT[page]}</div>
+            <div className={`${styles.presentationCardContainer} ${dark && styles.darkColor}`}>{PAGE_COMPONENT[page]}</div>
           ) : (
-            <div className={`${styles.commonContainer} ${!dark && styles.darkColor}`}>{PAGE_COMPONENT[page]}</div>
+            <div className={`${styles.commonContainer} ${dark && styles.darkColor}`}>{PAGE_COMPONENT[page]}</div>
           )}
-          <div className={`${styles.footerCard} ${!dark && styles.darkColor}`}>
+          <div className={`${styles.footerCard} ${dark && styles.darkColor}`}>
             <Footer name={footerData?.name} socialMedia={footerData?.socialMedia} />
           </div>
         </>

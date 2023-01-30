@@ -1,4 +1,4 @@
-const MONTHS = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre']
+import { MONTHS } from './constants'
 
 const sortByEndDate = (data) => {
   const formattedData = data?.map((doc) => {

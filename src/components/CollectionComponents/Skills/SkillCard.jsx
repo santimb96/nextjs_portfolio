@@ -29,7 +29,7 @@ const SkillCard = ({ listName, collectionList, description }) => {
             <h3>{SKILLS_DIC?.en[listName]}</h3>
           </div>
           <div className={styles.icons}>
-            <Separator />
+            {MATCH && <Separator />}
             <h4 className={styles.listTitle}>{'Preferidos'}</h4>
             <GoFlame />
             <h4 className={styles.listTitle}>{'Y también...'}</h4>

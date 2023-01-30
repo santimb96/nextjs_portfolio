@@ -5,7 +5,7 @@
   --button: clamp(100px, 13.8889vw + 50px, 200px);
 
   /* TEXT SIZES */
-  --tag: clamp(10px, 0.5556vw + 8px, 14px);
+  --tag: clamp(10px, 0.5556vw + 8px, 12px);
   --text: clamp(14px, 0.2778vw + 13px, 16px);
   --footer-text: clamp(10px, 0.5556vw + 8px, 14px);
   --title: clamp(18px, 0.4167vw + 16.5px, 21px);
