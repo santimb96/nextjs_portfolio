@@ -1,15 +1,14 @@
-.clearColor {
-  color: var(--primary-clear) !important;
-  background: var(--secondary-clear) !important;
+.darkColor {
+  transition: all 0.3s ease-in-out;
+  color: var(--primary-dark) !important;
+  background: var(--secondary-dark) !important;
 }
 
 .button {
-  color: var(--primary-dark);
+  color: var(--primary-clear);
   font-weight: bold;
-  /* width: var(--button);
-  max-height: 30px; */
   font-size: var(--text);
-  background: var(--secondary-dark);
+  background: var(--secondary-clear);
   padding: 1.5% 2.5% 1.5% 2.5%;
   font-family: inherit;
   border: none;

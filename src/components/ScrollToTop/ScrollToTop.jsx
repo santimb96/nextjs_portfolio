@@ -21,7 +21,7 @@ const ScrollToTop = ({ dark }) => {
   }
   return (
     <div className={styles.topToBtm}>
-      {showTopBtn && <FaAngleUp className={`${styles.iconPosition} ${styles.iconStyle} ${!dark && styles.clearColor}`} onClick={goToTop} />}
+      {showTopBtn && <FaAngleUp className={`${styles.iconPosition} ${styles.iconStyle} ${dark && styles.darkColor}`} onClick={goToTop} />}
     </div>
   )
 }

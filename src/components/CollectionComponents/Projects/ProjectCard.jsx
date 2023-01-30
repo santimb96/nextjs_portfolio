@@ -2,6 +2,7 @@ import React, { useState, useContext } from 'react'
 import Text from '../../Text/Text'
 import Tag from '../../Tag/Tag'
 import Button from '../../Button/Button'
+import Separator from '../../Separator/Separator'
 import { BackgroundContext } from '../../../../contexts/BackgroundContext'
 import { formatDate } from '../../../utils/utilities'
 import { AiOutlineClose, AiOutlinePlus, AiFillGithub } from 'react-icons/ai'
@@ -19,16 +20,16 @@ const ProjectCard = ({ props }) => {
     <>
       <div className={styles.card}>
         <LazyLoadImage className={styles.imgBackground} loading='lazy' src={`/img/${imgName}.webp`} />
-        <div className={!show ? `${styles.title} ${!dark && styles.clearColor}` : `${styles.displayNone}`}>
+        <div className={!show ? `${styles.title} ${dark && styles.darkColor}` : `${styles.displayNone}`}>
           <div className={styles.openOptions}>
             <h2 className={styles.name}>{name}</h2>
             <Button Icon={AiOutlinePlus} text='Info' handle={() => setShow(true)} />
           </div>
-          <div className={styles.separator}></div>
+          <Separator />
         </div>
-        <div className={show ? `${styles.content} ${!dark && styles.clearColor}` : `${styles.displayNone}`}>
+        <div className={show ? `${styles.content} ${dark && styles.darkColor}` : `${styles.displayNone}`}>
           <div className={styles.closeOptions}>
-            <button className={`${styles.close} ${!dark && styles.clearColor}`} onClick={() => setShow(false)}>
+            <button className={`${styles.close} ${dark && styles.darkColor}`} onClick={() => setShow(false)}>
               <AiOutlineClose />
             </button>
           </div>

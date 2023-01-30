@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Text = ({ text }) => {
-  const fixText = text?.split('. ')
+  const fixText = text?.trim().split('. ')
   return fixText?.map((sentence, idx) => (
     <p key={idx}>
       {sentence}

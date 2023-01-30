@@ -1,8 +1,10 @@
-.clearColor {
-  color: var(--secondary-clear) !important;
+.darkColor {
+  transition: all 0.3s ease-in-out;
+  color: var(--secondary-dark) !important;
 }
 
 .navButton {
+  color: var(--secondary-clear);
   font-family: inherit;
   font-weight: bold;
   position: relative;
@@ -13,7 +15,6 @@
   border: none;
   border-left: 1.5px solid transparent;
   background: transparent;
-  color: var(--secondary-dark);
   animation: leftToRight 0.7s forwards;
   cursor: pointer;
 }

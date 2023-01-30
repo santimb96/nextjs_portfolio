@@ -14,7 +14,7 @@ const Footer = ({ name, socialMedia }) => {
     <>
       <div className={styles.text}>
         <p className={styles.textContent}>
-          Con mucho <BsSuitHeartFill className={styles.iconGap} /> santimb96 - 2022
+          Con mucho <BsSuitHeartFill className={styles.iconGap} /> {name} - 2022
         </p>
       </div>
       <div className={styles.socialMedia}>

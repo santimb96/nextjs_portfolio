@@ -1,10 +1,11 @@
 .topToBtm {
   position: relative;
 }
-.clearColor {
-  color: var(--secondary-clear) !important;
-  background: var(--primary-clear) !important;
+.darkColor {
+  color: var(--secondary-dark) !important;
+  background: var(--primary-dark) !important;
 }
+
 .iconPosition {
   position: fixed;
   bottom: 40px;
@@ -14,11 +15,11 @@
 .iconStyle {
   width: 30px;
   height: 30px;
-  background: var(--primary-dark);
+  background: var(--primary-clear);
   border-radius: 50%;
   cursor: pointer;
   animation: moveButton 1.5s ease-in-out infinite, toVisible 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 @media (min-width: 768px) {

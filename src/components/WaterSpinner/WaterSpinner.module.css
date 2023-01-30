@@ -1,3 +1,7 @@
+.darkColor {
+  color: var(--secondary-clear) !important;
+}
+
 .lsdRipple {
   display: inline-block;
   position: relative;

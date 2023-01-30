@@ -7,7 +7,7 @@ import styles from './ChangeBackgroundColor.module.css'
 const ChangeBackgroundColor = () => {
   const { dark, setDark } = useContext(BackgroundContext)
   return (
-    <button onClick={() => setDark(!dark)} className={`${styles.changeColor} ${!dark && styles.clearColor}`}>
+    <button onClick={() => setDark(!dark)} className={`${styles.changeColor} ${!dark && styles.darkColor}`}>
       {dark ? <BsFillSunFill /> : <MdDarkMode />}
     </button>
   )
