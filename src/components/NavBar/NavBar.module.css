@@ -68,8 +68,12 @@
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+    gap: 2%;
+  }
+  .navContainer > img {
+    margin-left: 2.5%;
   }
 }
 @media screen and (min-device-width: 768px) and (max-device-height: 600px) and (orientation: landscape) {
