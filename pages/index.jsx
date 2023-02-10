@@ -16,10 +16,9 @@ const PublicWrapper = ({ setIsDark, isDark }) => {
   const { dark } = useContext(BackgroundContext)
   const [page, setPage] = useState('personaldata')
   const [show, setShow] = useState(false)
-  const [footerData, setFooterData] = useState({})
 
   const PAGE_COMPONENT = {
-    personaldata: <PresentationCard setFooterData={setFooterData} />,
+    personaldata: <PresentationCard />,
     skills: <SkillList />,
     certifications: <CollectionList listType={'certification'} sort={true} />,
     experience: <CollectionList listType={'experience'} sort={true} />,
@@ -58,7 +57,7 @@ const PublicWrapper = ({ setIsDark, isDark }) => {
             <div className={`${styles.commonContainer} ${dark && styles.darkColor}`}>{PAGE_COMPONENT[page]}</div>
           )}
           <div className={`${styles.footerCard} ${dark && styles.darkColor}`}>
-            <Footer name={footerData?.name} socialMedia={footerData?.socialMedia} />
+            <Footer />
           </div>
         </>
       )}
