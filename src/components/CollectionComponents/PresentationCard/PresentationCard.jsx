@@ -10,7 +10,7 @@ import WaterSpinner from '../../WaterSpinner/WaterSpinner'
 import { saveAs } from 'file-saver'
 import styles from './PresentationCard.module.css'
 
-const PresentationCard = ({ setFooterData }) => {
+const PresentationCard = () => {
   const [showDescription, setShowDescription] = useState(false)
   const [personalData, setPersonalData] = useState({})
   const [loading, setLoading] = useState(true)
@@ -21,7 +21,6 @@ const PresentationCard = ({ setFooterData }) => {
     getApiData('personalData', '/api/personalDataAPI')
       .then((data) => {
         setPersonalData(data)
-        setFooterData({ name: data?.name, socialMedia: data?.socialMedia })
       })
       .catch((error) => setError(error))
       .finally(() => setLoading(false))
