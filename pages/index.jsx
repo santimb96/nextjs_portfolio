@@ -1,5 +1,7 @@
 import React, { useEffect, useState, useContext } from 'react'
 import { useRouter } from 'next/router'
+import { BsCodeSlash } from 'react-icons/bs'
+import Head from 'next/head'
 import CollectionList from '../src/components/CollectionComponents/CollectionList/CollectionList'
 import Footer from '../src/components/Footer/Footer'
 import NavBar from '../src/components/NavBar/NavBar'
@@ -46,22 +48,32 @@ const PublicWrapper = ({ setIsDark, isDark }) => {
   }, [query, isReady, dark])
 
   return (
-    <div className={styles.container}>
-      <ScrollToTop dark={dark} />
-      <NavBar page={page} setShow={setShow} />
-      {show && (
-        <>
-          {page === 'personaldata' ? (
-            <div className={`${styles.presentationCardContainer} ${dark && styles.darkColor}`}>{PAGE_COMPONENT[page]}</div>
-          ) : (
-            <div className={`${styles.commonContainer} ${dark && styles.darkColor}`}>{PAGE_COMPONENT[page]}</div>
-          )}
-          <div className={`${styles.footerCard} ${dark && styles.darkColor}`}>
-            <Footer />
-          </div>
-        </>
-      )}
-    </div>
+    <>
+      <Head>
+        <title>Portafolio</title>
+        <meta
+          name='description'
+          content='Portafolio de Santiago Martínez, desarrollador front-end de Palma de Mallorca (España). En él se describe su experiencia laboral, académica y personal.'
+        />
+        <link rel='shortcut icon' href='img/portfolio.ico'></link>
+      </Head>
+      <div className={styles.container}>
+        <ScrollToTop dark={dark} />
+        <NavBar page={page} setShow={setShow} />
+        {show && (
+          <>
+            {page === 'personaldata' ? (
+              <div className={`${styles.presentationCardContainer} ${dark && styles.darkColor}`}>{PAGE_COMPONENT[page]}</div>
+            ) : (
+              <div className={`${styles.commonContainer} ${dark && styles.darkColor}`}>{PAGE_COMPONENT[page]}</div>
+            )}
+            <div className={`${styles.footerCard} ${dark && styles.darkColor}`}>
+              <Footer />
+            </div>
+          </>
+        )}
+      </div>
+    </>
   )
 }
 
