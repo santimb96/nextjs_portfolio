@@ -1,6 +1,5 @@
 import React, { useEffect, useState, useContext } from 'react'
 import { useRouter } from 'next/router'
-import { BsCodeSlash } from 'react-icons/bs'
 import Head from 'next/head'
 import CollectionList from '../src/components/CollectionComponents/CollectionList/CollectionList'
 import Footer from '../src/components/Footer/Footer'
