@@ -12,6 +12,13 @@
   }
 }
 
+@media (min-width: 1200px) {
+  .collectionList {
+    width: 80%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 /* ANIMATIONS */
 
 @keyframes toVisible {
