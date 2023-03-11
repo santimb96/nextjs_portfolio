@@ -15,7 +15,7 @@
   --icon: clamp(16px, 2.6389vw + 6.5px, 35px);
   --certification-card-icon: clamp(50px, 6.9444vw + 25px, 100px);
 
-  --separator: 1.5px;
+  --separator: 1px;
 
   /* LANDSCAPE SIZES */
   --landscape-text: clamp(10px, 0.8333vw + 7px, 16px);
